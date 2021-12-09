@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head
+<body>
+    <h2 style="text-align=center;"> javascript To Find Odd Or Even Number! </h2>
+    <label> Enter Number </label> <br/>
+    <input type="number" name="" id="oddeven" onkeyup="ischeck()"><span id="showmsg"> </span>
+
+    <script>
+        function ischeck(){
+            var num = document.getElementById('oddeven').value;
+            //aleart(num)
+            if((num % 2) == 0){
+            document.getElementById('showmsg').innerHTML = "Hurray! Number " +num+ " is an Even Number";        
+            }
+            else{
+            document.getElementById('showmsg').innerHTML = "Oh No! " +num+ " is an odd Number"; 
+            }
+        }
+            </script>
+</body>
+</html>

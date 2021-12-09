@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+       <h2 style="text-align=center;"> javascript to find number is positive or negative or zero </h2>
+    <label> Enter Number </label> <br/>
+    <input type="number" name="" id="pnz" onkeyup="ischeck()"><span id="showmsg"> </span>
+    <script type="text/javascript">
+        function ischeck(){
+            var value = document.getElementById('pnz').value;
+            if(value > 0){
+            pnz = '${value} is positive number';
+        }
+        else if (value < 0){
+        pnz = '${value} is negative number';
+    }
+        else if (value == 0){
+            pnz = '${value} is zero';
+        }
+        document.getElementById('showmsg').innerText = pnz;
+    }
+    </script>
+</body>
+</html>

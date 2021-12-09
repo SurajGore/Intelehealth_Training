@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="99AFF" align="center">
+    <h1><b>PERFECT_NUMBER</b></h1>
+    Enter Your Number:- <input type="number" id="Number" name="Number">
+
+    <p><b>Click to check the Number is PerfectNumber</p>
+
+    <button onclick="is_perfect() ">Try it</button>
+        <script type="text/javascript ">
+            function is_perfect(){
+                var number = parseInt(document.getElementById("Number").value)
+                var Count = 0;
+                for(var i=1;i<=number/2;i++){
+                    if(number%i === 0){
+                        Count += i;
+                    }
+                }
+                if(Count === number && Count !== 0){
+                    document.write("It is a perfect number =>",Count);
+                }else{
+                    document.write("It is not a perfect number =>",Count);
+                }   
+            }
+    </script>
+</body>
+</html>

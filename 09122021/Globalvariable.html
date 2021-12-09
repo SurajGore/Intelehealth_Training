@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = "i am global Variable";
+        document.write(i+"<br/>"); 
+
+        function show(){
+            document.write("in show()" +i +"<br/>"); //accessible in function
+        }
+        show();
+        document.write(i + "<br/>"); //accessible outside
+
+        function disp(){
+            document.write("in disp()" +i +"<br/>"); //accessible in function
+        }
+        disp();
+
+        if(true){
+            document.write("in if" + i+"<br/>"); //accessible in block
+        }
+
+        function print(){
+            var x =23;
+            //document.write(x+"<br/>");
+        }
+        print();
+    </script>
+</body>
+</html>
