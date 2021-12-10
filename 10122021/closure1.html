@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        function outerFun(){
+            var j = "j a Local Variable Of Outer Function";
+            document.write(j +"<br>");
+            function innerFun(){
+                var k = "k a Local Variable Of Inner Function";
+                var c = a+j+k;
+                document.write(k +"<br>");
+            }
+            innerFun();
+            document.write(j +"<br>");
+        }
+        outerFun();
+    </script>
+</body>
+</html>
