@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="red" align="center">
+    <h1><b>Check Number Is Greater Than 100  Or Not By Using CLOSURE METHOD</b></h1>
+
+    Enter Your First Number:- <input type="number" id="T1" name="Number1">
+    <br></br>
+    Enter Your Second Number:- <input type="number" id="T2" name="Number2">
+
+    <p><b>Click to check the Number</p>
+
+    <button onclick="Closure() ">Submit</button>
+        <script>
+            var x = 10;
+            function outerFun(a,b){
+                var c = a * b;
+                function innerFun(){
+                    if(c > 100){
+                        document.write('Yes! C = ' + c + ' is greater then 100;')
+                    }else{
+                        document.write('No! C = ' + c + ' is not greater then 100;')
+                    }
+                }
+                innerFun()
+            }
+            function Closure(){
+                let a = parseInt(document.getElementById("T1").value);
+                let b = parseInt(document.getElementById("T2").value);
+                outerFun(a, b);
+            }
+        </script>
+</body>
+</html>

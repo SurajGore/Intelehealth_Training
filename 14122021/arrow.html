@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = function() {
+            document.write("Hello World!"+"<br/>");
+        }
+        a();
+
+        //arrow function syntax
+
+        var b = ()=>{document.write("Hello from arrow!"+"<br/>")};
+        b();
+
+        var c = (n)=>{return n;};
+        document.write(c(3)+"<br/>");
+        ( () =>{document.write("Hello from IIFE")})();
+    </script>
+</body>
+</html>
