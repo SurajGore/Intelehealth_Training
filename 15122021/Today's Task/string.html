@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+ 
+<head>
+    <!--function to check that name can not be empty-->
+    <script>
+        function checkempty(form) {
+            if (form.name.value == null ||
+                form.name.value == undefined ||
+                form.name.value.length == 0) {
+               
+                alert("String cannot be empty\n");
+                return false;
+            } else {
+                alert("Your response has been recorded\n");
+                return true;
+            }
+        }
+    </script>
+</head>
+ 
+<body>
+    <div>
+        <center>
+            <form onsubmit="return checkempty(form1)"
+                  action="#" method="post"
+                  name="form1">
+                <label>Enter your name</label>
+                <br>
+                <input type="string"
+                       placeholder="Enter name"
+                       name="name" />
+                <br>
+                <br>
+                <label>Enter Email</label>
+                <br>
+                <input type=""
+                       placeholder="Enter email"
+                       name="email" />
+                <br>
+                <br>
+                <label>Enter password</label>
+                <br>
+                <input type="password"
+                       placeholder="Enter password "
+                       name="password1" />
+                <br>
+                <br>
+                <label>Confirm password</label>
+                <br>
+                <input type="password"
+                       placeholder="Enter password "
+                       name="password2" />
+                <br>
+                <br>
+                <input type="submit"
+                       value="submit" />
+                <br>
+            </form>
+        </center>
+    </div>
+</body>
+ 
+</html>

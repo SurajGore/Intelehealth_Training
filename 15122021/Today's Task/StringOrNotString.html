@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        Javascript | Check if a variable is a string
+    </title>
+</head>
+  
+<body style="text-align:center;">
+  
+    <h1 style="color:green;">  
+           Function Is String Or Not String 
+        </h1>
+    <p>
+        var boolValue = true;
+        <br> var numValue = 17;
+    </p>
+  
+    <button onclick="myvalue()">
+        Click to check
+    </button>
+    <p id="GFG_P" style="color:green; font-size: 20px;">
+    </p>
+    <script>
+        function myvalue() {
+            
+            <!-- "boolean" value. -->
+            var boolValue = true;
+              
+            <!-- "integer " value. -->
+            var numValue = 17;
+            var el = 
+                document.getElementById("GFG_P");
+            var bool, num;
+            
+            if (typeof boolValue == "string") {
+                bool = "is a string";
+            } else {
+                bool = "is not a string";
+            }
+            if (typeof numValue == "string") {
+                num = "is a string";
+            } else {
+                num = "is not a string";
+            }
+            el.innerHTML = "boolValue " + bool 
+            + "<br>numValue " + num;
+  
+        }
+    </script>
+</body>
+  
+</html
