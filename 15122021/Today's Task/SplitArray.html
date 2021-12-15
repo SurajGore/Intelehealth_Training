@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
-        function func()
-         {
-    var str = 'Happy Birthday To You'
-    var array = str.split(" ", 3);
-    document.write(array);
-         }
-    func();
-    </script>
+<body bgcolor="Yellow" align="center">
+    <h1 style="color:red;">String Blank Checker</h1>
+    Fill The Box:- <input type="text" id="strValue" name="strValue">
+
+    <p>Click to Split the String</p>
+
+    <button onclick="split()">click Me</button>
+        <script>
+            function split() {
+                var strValue = document.getElementById('strValue').value
+                document.write(strValue.split(" "))
+		    }
+        </script>
 </body>
 </html>
