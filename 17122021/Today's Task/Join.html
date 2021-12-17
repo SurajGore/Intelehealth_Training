@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink" align="center">
+    <h1 style="color:red;">Array </h1>
+    
+<h2 style="color:gray;">JavaScript Array Join Methods</h2> 
+<h2 style="color:blue">join()</h2> 
+<p>The join() method joins array elements into a string.</p>
+<p>It this example we have used " * " Or " + "as a separator between the elements:</p>
+
+<button onclick="print()">click Me</button>
+<script>
+    function print()
+    {
+    var arr = [1,2,3,4];
+    let addition=0;
+    arr.filter((x=>
+    {
+        addition+=x;
+    }))
+    var new_arr = arr.join("+");
+        document.write(addition +"("+new_arr+")"+"<br>");
+
+        var new_arr = arr.join("+");
+        document.write(new_arr+"<br>");
+
+        var new_arr = arr.join("*");
+        document.write(new_arr+"<br>");
+    }
+</script>
+</html>
