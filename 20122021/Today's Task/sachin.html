@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink" align="center">
+    <h1 style="color:orange;">Letter Counter</h1>
+    Enter your Name:- <input type = "text" id="strValue" name="strValue">
+    <!-- Enter the letter:- <input type = "text" id="strValue1" name="strValue1"> -->
+
+    <p>Click to count the number of letter</p>
+
+    <button onclick="Short_Name()">onclick</button>
+    <script>
+        //Simlpe Way For Perticular String
+        // var str = "Sachin Tendulkar.";
+        // document.write(str.slice(0,8)+"<br/>");
+
+        // Universal way for any strings
+        function Name(str){
+            var c = 0;
+            for(var i of str){
+                if(i === " "){
+                    let l = str.indexOf(i)+2
+                    var final_name = str.slice(0,l)
+                    document.write(`<b>Output => "${final_name}."`)
+                    break
+                }
+            }
+        };
+        function Short_Name() {
+            var str = document.getElementById('strValue').value
+            document.write(`Input => "${str}" `+"<br>"+"<br>");
+            Name(str);
+        };
+    </script>
+    </script>
+</body>
+</html>

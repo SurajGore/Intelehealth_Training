@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function findOcc(arr, key){
+    let arr2 = [];
+    
+    arr.forEach((x)=>{
+       
+     if(arr2.some((val)=>{ return val[key] == x[key] }))
+     {
+     arr2.forEach((k)=>{
+     if(k[key] === x[key]){ 
+     k['=']++
+ }
+ })
+     }
+     else
+     {
+       let a = {}
+       a[key] = x[key]
+       a['='] = 1
+       arr2.push(a);
+     }
+  })
+    
+  return arr2
+}
+  
+  
+let arr = [
+   {
+      employeeName: "Ram",
+      employeeId: 23
+   },
+   {
+      employeeName: "Shyam",
+      employeeId: 24
+   },
+   {
+      employeeName: "Ram",
+      employeeId: 21
+   },
+   {
+      employeeName: "Tina",
+      employeeId: 25
+   },
+   {
+      employeeName: "Ram",
+      employeeId: 22
+   },
+]
+  
+let key = "employeeName"
+console.log(findOcc(arr, key))
+</script>
+</body>
+</html>

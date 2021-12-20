@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ["Rahul", "Sonam","Raj", "Sumit","Rohit"];
+        
+        // //all elements don 
+        arr.fill("Don");
+         document.write(arr);
+         document.write("<br/>");
+
+        //fill Don start with index 1 o 3 (3 not included)
+        arr.fill("Don", 1, 3);
+        document.write(arr);
+        document.write("<br/>");
+
+        //creating empty array length 3 and fill it with jay
+        var new_arr = new Array(3).fill("jay");
+        document.write(new_arr);
+        
+    </script>
+
+</body>
+</html>

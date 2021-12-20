@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink" style="text-align:center;">
+  
+  <h1 style="color:green;"> Javascript </h1>
+  <h2> Print The occurrence Of a </h2>
+  <button onClick="occurrence()"> count </button>
+  <p id="OA"> </p>
+  
+<script>
+      function occurrence() {
+          var s = "Javascript";
+          var f = "s";
+          var r = s.split(f).length - 1;
+          document.getElementById("OA").innerHTML = r;
+      }
+  </script>
+</body>
+</html>
