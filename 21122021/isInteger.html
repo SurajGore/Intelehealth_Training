@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write(Number.isInteger()+"<br/>"); //false
+        document.write(Number.isInteger(100)+"<br/>"); //true
+        document.write(Number.isInteger(-100)+"<br/>"); //true
+        document.write(Number.isInteger(100.45)+"<br/>"); //false
+        document.write(Number.isInteger(200-100)+"<br/>"); //true
+        document.write(Number.isInteger(0.1)+"<br/>"); //false
+        document.write(Number.isInteger("100")+"<br/>"); //false
+        document.write(Number.isInteger("Hello")+"<br/>"); //false
+
+
+        document.write(Number(true)+"<br/>"); //1
+        document.write(Number(false)+"<br/>"); //0
+        document.write(Number("100")+"<br/>"); //100
+        document.write(Number(100/"Hello")+"<br/>"); //NaN
+        
+    </script>
+</body>
+</html>
