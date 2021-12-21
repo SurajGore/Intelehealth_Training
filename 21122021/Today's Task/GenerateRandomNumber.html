@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body <body bgcolor="Red" align="center">
+ <body bgcolor="Red" align="center">
     <h2>Generate Random Number:</h2>
     <p><b>Please Refresh The Page</b></p>
-    
+    <button onclick ="random([1,2,3,'Red','Blue','Ramesh' ,'true','false'])">Click Me</button>
 <script>
     function random(arr){
         var random = arr[Math.floor(Math.random() * arr.length)];
-        document.write(random);
+        //document.write(random);
+        alert(random);
 
     }
-    random([1,2,3,"Red","Blue","Ramesh" ,"true","false"])
+   // random([1,2,3,"Red","Blue","Ramesh" ,"true","false"])
     </script>
 </body>
 </html> 
