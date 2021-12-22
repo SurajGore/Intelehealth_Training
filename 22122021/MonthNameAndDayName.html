@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tarikh = new Date();
+        document.write(tarikh +"<br>");
+        var month = tarikh.getMonth();
+        var Day = tarikh.getDay();
+        document.write(getMonthName(month) + "<br>");
+        document.write(getDayName(Day) + "<br>");
+
+        function getMonthName(monthnumber){
+            var monthnumber = ["january", "february", "march","april","may","june","july","auguest","september","october","november","decmber"];
+            return monthname [monthnumber];
+        }
+            function getDateName (daynumber){
+            var daynumber = ["Sunday","Monday","tuesday","wednesday","thursday","friday","saturday"];
+            return dayname [daynumber];
+        }
+    </script>
+</body>
+</html>
