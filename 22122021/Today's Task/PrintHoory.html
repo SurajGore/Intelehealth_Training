@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body bgcolor="blue" align="center">
+        <h2>JavaScript</h2>
+        <p>Print Hooray If The string length Is Greater Than 10</p>
+        <p>Enter the Character: <input id="char"><button onclick="gre()">click me </button></p>
+        <script> 
+        function gre(){
+        var str = document.getElementById("char").value;
+        if(str.length > 10) 
+        {
+        alert("Hooray");
+        }
+    }
+        </script>
+</body>
+</html>
