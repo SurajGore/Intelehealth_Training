@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myfuction()"> try it </button>
+    <p id = "demo"></p>
+   <script>
+function myfuction(){
+    var str = "Hello 34 hjhg jgjjks hjj"; //\s=finds white space
+    var patt1 =/\d/g;
+    var result = str.match(patt1);
+    document.getElementById("demo").innerHTML = result;
+}
+   </script> 
+</body>
+</html>

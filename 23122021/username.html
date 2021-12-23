@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function is_name(str)
+        {
+            var regexp = /^[a-zA-Z0-9@.]{3,30}$/;
+
+            if(regexp.test(str))
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        console.log(is_name("Sachin@123"));
+    </script>
+</body>
+</html>
