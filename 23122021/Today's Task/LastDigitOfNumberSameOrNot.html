@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = prompt('Enter a first integer: ');
+        const b = prompt('Enter a second integer: ');
+        const c = prompt('Enter a third integer: ');
+
+        const result1 = a % 10;
+        const result2 = b % 10;
+        const result3 = c % 10;
+
+        if(result1 == result2 && result1 == result3) 
+        {
+            document.write(`${a}, ${b} and ${c} Last Digit Is Same.`);
+        }
+        else
+        {
+            document.write(`${a}, ${b} and ${c} Last Digit Is Not Same.`);
+        }
+    </script>
+</body>
+</html>
