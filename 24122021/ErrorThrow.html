@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script></script>
+</head>
+<body>
+    <input id="demo" type="text"/>
+    <button type="button" onclick="myfunction()">Test input</button>
+    <p id="message"> </p>
+
+    <script>
+        function myfunction(){
+            var x;
+            try{
+                var x = document.getElementById("demo").value;
+                //console.log(x);
+
+                if (x == "") throw "empty";
+                if (isNaN(x)) throw "Not A Number";
+                x=Number(x);
+                if (x < 5) throw "too low";
+                if (x > 10) throw "too high";
+            }
+            catch(err){
+                document.getElementById("message").innerHTML="input is "+ err;
+            }
+            if(x>=5 && x<=10){
+                document.getElementById("message").innerHTML="input is right";
+            }
+        }
+    </script>
+</body>
+</html>

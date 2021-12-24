@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person = {}
+        Object.defineProperty(person, "name",{
+            writable: true,
+            value: "bitcode",
+            configurable: true,
+            enumerable: false
+        });
+
+        document.write(person.name+"<br/>");
+        //     person.name = "om"
+        // document.write(person.name+"<br/>");
+        //     delete person.name;
+        // document.write(person.name+"<br/>");
+        for(prop in person){
+            alert(prop);
+        }
+    </script>
+</body>
+</html>
