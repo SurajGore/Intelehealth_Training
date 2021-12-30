@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class father{
+            constructor(){
+                this.name = "Sachin";
+            }
+            showFMoney(){
+                return "Father Money <br>";
+            }
+        }
+
+        class Son extends father{
+            showSMoney(){
+                return "Son Money <br>";
+            }
+        } 
+
+        class GrandSon extends Son{
+            showGMoney(){
+                return "Grandson Money";
+            }
+        }
+
+        var t = new GrandSon();
+        // document.write(t.showFMoney());
+        // document.write(t.showSMoney());
+        // document.write(t.showGMoney());
+
+        
+        var f = new father();
+        // document.write(f.showFMoney());
+        // document.write(f.showSMoney());
+        // document.write(f.name);
+
+        
+        var u = new Son();
+        // document.write(u.showGMoney());  
+        // document.write(u.name);
+
+    </script>
+</body>
+</html>

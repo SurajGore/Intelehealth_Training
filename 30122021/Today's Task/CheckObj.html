@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function cricketer(name,lName,age)
+		{
+			//this.name=name;
+			this.lName=lName;
+			this.age=age;
+		}
+		var Suraj = new cricketer('sachin','tendulkar', 25);
+
+		if('name' in Suraj)
+		{
+			document.write("name is exist  : " +Suraj.name);
+		}
+		else
+		{
+			document.write("doesnt exsit");
+		}
+	</script>
+</body>
+</html>

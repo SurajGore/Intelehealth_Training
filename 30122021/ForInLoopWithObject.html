@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Mobile (model_no){
+            this.model = model_no;
+            this.color = 'white';
+            this.ram = '4GB';
+            this.price = function(){
+                document.write(this.model + "price RS.3000 <br>");
+            };
+        }
+
+        var samsung = new Mobile('Galaxy');
+        var nokia = new Mobile('3310');
+        for(var key in nokia){
+            // document.write(key + "<br>"); only keys it will print
+            document.write(nokia[key] + "<br>"); // this will print only values
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     // Traditional Way For Creating Class
+    //     var Mobile = function(){
+    //         this.model = 'Galaxy';
+    //         this.foo= function(){
+    //         return "class using constructor";
+    //     }
+    //     }
+
+    //    // Prototype Member
+    //     Mobile.prototype.display = function(){
+    //         return "prototype Method";
+    //     }
+
+        //class declaration
+        class Mobile {
+            constructor() {
+                //instance Member
+                this.a = 12;
+                this.foo = function() {
+                    return "Instance Method";
+                };
+            }
+
+            //prototype member
+            display() {
+                return "Prototype Method";}
+            }
+            var samsung = new Mobile ();
+            document.write(samsung.a +"<br/>");
+            document.write(samsung.display() +"<br>");
+            
+    </script>
+</body>
+</html>

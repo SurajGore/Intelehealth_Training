@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var student=function(name,age,dob,city,ph_no)
+		{
+			this.name=name;
+			this.age=age;
+			this.dob=dob;
+			this.city=city;
+			var ph_no=ph_no;
+			this.mobno=function()
+			{
+				return 'phone number of '+this.name+' is '+ph_no;
+			}
+		}
+			var Suraj =new student('Suraj Gore','28yr','15March1993','Thane',8855941441);
+			document.write(Suraj.mobno()+"<br>");
+	</script>
+</body>
+</html>
