@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(){
+
+        }
+        console.log(Car);
+        /* This Property is defined in function's Prototype Object so all Objects will have access
+        to this property and this is just one single property for all objects. It dosen't make copies 
+        for objects that separately. Usually we defined methods as a prototype method Member rather 
+        then Prototype variable member*/
+
+        Car.prototype.a = 100000;
+
+        //Creating a new Object using the new keyword
+        var lg = new Car();
+
+        /* It first checks if lg object have a property a as 
+        it does not have it so it go to its prototype object
+        pointed by __proto__ and then ask him if he has property
+         a as it has so finally we receive 10. This is how 
+         it works behind the browser and JS Engine is  the responsible for this task */ 
+        console.log(lg.a)
+    </script>
+</body>
+</html>

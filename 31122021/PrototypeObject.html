@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Mobile(){
+
+        }
+        //Mobile is the object created by Function which is actually Function itself
+        //console.log(Mobile);
+
+        //prototype is a property of mobile which points to the prototype object of mobile
+        console.log(Mobile.prototype); //it will show prototype object of mobile function
+
+        //creating a new object using new keyword
+        var lg = new Mobile();
+
+        //when you create anew object of that function using new kayword JS Engine create an object and sets a property named_proto_which points to its function's prototype object 
+        //console.log(lg._proto_);
+        Mobile.prototype
+
+        //verifying all stuffs 
+        console.log(lg._proto_ === Mobile.prototype); 
+        //true
+    </script>
+</body>
+</html>

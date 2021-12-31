@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(){
+
+        }
+        // Car is the object created by function which is actually Function itself
+        // console.log(Car);
+
+        //prototype is a property of Car which points to the Prototype Object of Car
+        console.log(Car.prototype); // it will show Prototype Object of Car Function
+
+        // Creating a new Object using new keyword 
+        var lg = new Car();
+
+        //When you create a new objectof that function using new keyword JS Engine creates an object and sets a property named __proto__ which points to its function's prototype object
+        // console.log(lg.__proto__);//Car.prototype
+
+        //verifying all stuffs 
+        console.log(lg._proto_ === Car.prototype); 
+        //true 
+    </script>
+</body>
+</html>

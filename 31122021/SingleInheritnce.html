@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var MObile = function(model_no){
+            //Instance Member
+            this.model =model_no;
+            this.price = 3000;
+        };
+        var samsung = new MObile('Galaxy');
+        var nokia = new MObile('3310');
+        //console.log(Mobile)
+        //classname.prototype.key = 'value';
+        //prototype member
+        MObile.prototype.color ='White';
+        //samsung.color = 'white';
+        // nokia.color = 'white';
+        // document.write(samsung.color);
+        // samsung.ram= 256;
+        console.log(samsung);
+        console.log(nokia);
+        //document.write(Object.keys(samsung));
+  </script>
+</body>
+</html>

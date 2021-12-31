@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //inheritance with constructor
+        class Father {
+            Constructor(money){
+                this.Fmoney = money;
+            }
+            showFMoney(){
+                return this.Fmoney+ "Father Money <br>";
+            }
+        }
+        class Son extends Father
+        {
+            constructor(money){
+                super(money);
+                this.a = 12;
+                //var a=12;
+            }
+            showSMoney(){
+                return "Son Money <br>";
+            }
+        }
+
+        
+        var s = new Son (3000);
+        document.write(s.showFMoney()+"<br/>");
+        //document.write(s.showSMoney()+"<br/>");
+        //document.write(s.a);
+
+        //var f = new Father(5000);
+        //document.write(f.showFMoney()+"<br/>");
+    </script>
+</body>
+</html>

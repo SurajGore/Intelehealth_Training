@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Car = function(model_no){
+            // Instance Member
+            this.model = model_no;
+            this.price = 2,100,000;
+        };
+        var Ferrari = new Car('Monza SP1');
+        var Mercedes = new Car('Mercedes-AMG ONE');
+        // console.log(Car)
+        // classname.prototype.key = 'value';
+        // Prototype Member
+        Car.prototype.color = 'white';
+        // Ferrari.color = 'white';
+        // Mercedes.color = 'white';
+        // document.write(Ferrari.color);
+        // Ferrari.Engine = 256;
+        console.log(Ferrari);
+        console.log(Mercedes);
+        // document.write(Object.keys(Ferrari));
+    </script>
+</body>
+</html>
