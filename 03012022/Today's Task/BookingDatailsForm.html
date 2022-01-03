@@ -51,8 +51,15 @@
 		{
 			var n=document.getElementById('ticket').value;
 		  var result = s*n;
-		  document.totalform.result1.value = result;
-	    }
-	</script>
+		  if(n>=10){
+			var discount=10;
+			var dis=result-result/10;
+			document.totalform.result1.value = dis;
+		}
+		else{
+			document.totalform.result1.value = result;
+		}
+		}
+	</script>	
 </body>
 </html>
