@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Event object
+    </h1>
+    <p id="myp">Click Me</p>
+    <script>
+        document.getElementById("myp").addEventListener("click", function(e){
+            console.log(e);
+            console.log(e.type);
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log(e.target);
+            console.log(e.currentTarget);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Event Listener</h1>
+    <button id="mybtn">Click Me</button> 
+    <script>
+    function disp1(){
+        alert("Button Clicked");
+    }
+        var btn = document.getElementById("mybtn");
+        btn.addEventListener("click", disp1, false);
+        btn.addEventListener("click", disp1, true);
+        btn.removeEventListener("click", disp1, true);
+    </script>
+</body>
+</html>

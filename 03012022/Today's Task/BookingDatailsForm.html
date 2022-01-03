@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body bgcolor="lightblue">
+	
+	<form name="totalform">
+<fieldset>
+    	<legend>Booking Details</legend>
+		  Movie :<select>
+			<option value="disabled selected hidden">movie<option>
+			<option>movie1</option>
+			<option>movie2</option>
+			<option>movie3</option>
+		  </select>
+		  <br><br>
+
+		  Theaters :<select>
+			<option value="disabled selected hidden">Theater</option>
+			<option>Theater1</option>
+			<option>Theater2</option>
+			<option>Theater3</option>
+		  </select>
+		  <br><br>
+
+		  Date :<input type="date" id="mydate" name="visitor_name" placeholder="Suraj Gore" pattern=[A-Z\sa-z]{3,20} required>
+		  <br><br>
+		  Email :<input type="text" id="email" name="visitor_email" placeholder="surajgore@gmail.com" required>
+		  <br><br>
+		  Tickets :<input type="number" id="ticket">
+		  <br><br>
+		  Total Price :<input type=" " id="result1">
+		  <br><br>
+		  <input type="button" value="Total price" onclick="BookTicket()">
+  </fieldset>
+
+	</form>
+    	<br>Per Ticket price=100.00 Rupees.
+      <br><br>
+	    Discounts :
+	    <br><br>
+	    => 10% discount if number of booked shows>=10
+
+
+	<script type="text/javascript">
+		const s = 100;
+		function BookTicket()
+		{
+			var n=document.getElementById('ticket').value;
+		  var result = s*n;
+		  document.totalform.result1.value = result;
+	    }
+	</script>
+</body>
+</html>
