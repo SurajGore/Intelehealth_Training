@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Press And HoldDown To Set A Red Background Color & Release The Key To Set A Orange Background Color.</p> -->
+        
+    <!-- <input type="text" id="changecolor" onkeydown="keydownFunction()" onkeyup="keyupFunction()"> -->
+        
+    Enter Your Name: <input type="text" id="fname">
+    Enter Your Designation: <input type="text" id="des">
+    <script>
+        // function keydownFunction() {
+        //   document.getElementById("changecolor").style.backgroundColor = "red";
+        // }
+        
+        // function keyupFunction() {
+        //   document.getElementById("changecolor").style.backgroundColor = "orange";
+        // }
+
+        //Using addEventListener
+        document.getElementById("fname").addEventListener("keyup", myFunction);
+        function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+        }
+
+        document.getElementById("des").addEventListener("keydown", Function);
+        function Function() {
+        var y = document.getElementById("des");
+        y.value = y.value.toLowerCase();
+        }
+    </script>
+</body>
+</html>

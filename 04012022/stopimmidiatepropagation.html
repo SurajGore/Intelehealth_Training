@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+        #two {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        #three {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+    <h1> Event Methods </h1>
+    <div id="one" data-name="1">1
+        <div id="two" data-name="2">2
+           <div id="three" data-name="3">3
+            </div>
+        </div>
+    </div>
+    <script>
+        function div1 (e){
+            this.style.backgroundColor = 'red';
+        }
+        
+        function div2 (e){
+            this.style.backgroundColor = 'blue';
+            e.stopImmediatePropagation();
+            //e.stopPropagation();
+        }
+
+        function div2_2 (e){
+            this.style.width = '250px';
+            e.stopImmediatePropagation();
+        }
+
+        function div3 (e){
+            this.style.backgroundColor = 'green';
+            e.stopImmediatePropagation();
+        }
+
+        var divone = document.getElementById("one");
+        //console.log(divone)
+        var divtwo = document.getElementById("two");
+        var divthree = document.getElementById("three");
+        divone.addEventListener("click", div1, false);
+        divtwo.addEventListener("click", div2, false);
+        divtwo.addEventListener("click", div2_2, false);
+        divthree.addEventListener("click", div3, false);
+    </script>
+</body>
+</html>
