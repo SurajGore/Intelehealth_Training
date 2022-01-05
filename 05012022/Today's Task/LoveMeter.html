@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #lovevalue
+    {
+    border-radius: 25px; border: 2px solid ; padding: 10px; width: 400px; height: 10px; 
+}
+    </style>
+</head>
+<body>
+<div style="padding: 10% 20% ;">
+    <fieldset align="center" style="width: 50%; position: absolute;">
+        <legend align="center">Love Meter:</legend> 
+     First Name: <input type="text" name="" class="form-control text-center"  id="name" ><br><br>
+     Second Name: <input type="text" name="" class="form-control text-center" id="lname"><br><br>
+     <button onclick="checkloveper()"> Calculate </button><br>
+     <h1>Total Love Meter:</h1>
+     <input type="text" name="" class="form-control text-center w-25 m-auto" id="lovevalue">
+    </fieldset>
+</div>
+<script>
+    function checkloveper()
+    {
+        var name = document.getElementById('name').value;
+        var lname = document.getElementById('lname').value;
+
+        if(name == "")
+        {   
+            alert('Please enter your name');
+        }else if (name.length <=2 ) 
+        {
+        alert('Min lenght is 3')
+        }
+        else if(!isNaN(name))
+        {
+        alert('Numbers are not allowed');
+        }
+        else if(lname == "")
+        {
+        alert('Please enter your love name');
+        }
+        else if (lname.length <=2 )
+        {
+        alert('Min lenght is 3')
+        }
+        else if(!isNaN(lname))
+        {
+        alert('Numbers are not allowed');
+        }
+        else
+        {
+        var lovdata = Math.random() * 100;
+        lovdata = Math.floor(lovdata);
+        document.getElementById('lovevalue').value = lovdata + "%"; 
+        if(lovdata<=35)
+        {
+        document.getElementById("lovevalue").style.backgroundColor = "yellow";
+        }
+       else if(lovdata>35 && lovdata<=65)
+        {
+        document.getElementById("lovevalue").style.backgroundColor = "orange";
+        }
+        else
+        {document.getElementById("lovevalue").style.backgroundColor = "red";}
+    }
+  
+    }
+</script>
+</body>
+
+</html>
