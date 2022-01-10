@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="myul">
+        <li class="list-item">One</li>
+        <li class="list-item">Two</li>
+        <li id="three">Three</li>
+    </ul>
+
+<script type="text/javascript">
+    const liveElements = document.getElementsByClassName('list-item');
+    console.log(liveElements);
+
+const notliveElements = document.querySelectorAll('.list-item');
+console.log(notliveElements);
+console.log(liveElements.length)//length of
+console.log(notliveElements.length)//length of
+
+document.getElementById('three').className = 'list-item';
+console.log(liveElements.length)//length of
+console.log(notliveElements.length)//length of
+
+console.log(liveElements); //length of
+console.log(notliveElements); //length of
+</script>
+</body>
+</html>

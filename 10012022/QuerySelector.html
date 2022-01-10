@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="para">Tree</title>
+</head>
+<body>
+    <h1> We are Learning JS</h1>
+    <h1 class="para myclass">Hello World</h1>
+    <h2>Now</h2>    
+    <p class= "para">Hello <span class="myspan">Pune</span> <em>World</em> <span>JS</span> </p>
+    <p class="myclass"><span class="myspan">Bye</span>Pune</p>
+    <div id="show">
+        <p>1st p inside div</p>
+        <p class="para"> 2nd p inside div</p>
+    </div>
+    <p id="show1">I am Paragraph</p>
+<script>
+    //Element selector
+    //var result = document.querySelector("p");
+    //First Come First Get
+    //var result = document.querySelector("p, h1");
+    //document.write(result);
+    //console.log(result);
+
+    //ID selector
+    //var result1 = document.querySelector("#show1");
+    //First Come First Get
+    //var result1 = document.querySelector("#show, #show1");
+    //document.write(result1);
+    //console.log(result1);
+
+    //Class selector
+    //var result2 = document.querySelector(".para");
+    //First Come First Get
+    //var result2 = document.querySelector(".para, .myclass");
+    //document.write(result2);
+    //console.log(result2);
+
+    var result = document.querySelector("p.para>span.myspan");
+    console.log(result);
+</script>    
+</body>
+</html>

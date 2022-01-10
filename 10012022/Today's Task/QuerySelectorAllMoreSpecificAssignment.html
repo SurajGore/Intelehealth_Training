@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree</title>
+</head>
+<body>
+     <h1 class="para">Hello World</h1>
+    <div class="div1">
+        <h2 class="para div1">Hello H2</h2>
+        <p class="para">hello Para</p>
+    </div>
+    <h3 class="myh3">Hello H3</h3>
+    <p class="myh3">Hello<em>I am em</em>Para<span>I am span</span></p>
+    <div class="myh3 div1">
+        I am div...
+    </div>
+    <div id="div2">I am new div</div>
+    <div> I am last div...</div>
+    <script>
+        //More Specific
+        // var data = document.getElementById("div1");
+        // var result = data.querySelectorAll("p.para");
+        // document.write(result);
+        // console.log(result);
+
+        var result1 = document.getElementById("div1").querySelectorAll("p.para");
+        document.write(result1);
+        console.log(result1);
+
+        // var result2 = document.querySelectorAll("#div1 > .para div1 > p.para");
+        // document.write(result2);
+        // console.log(result2);
+
+        // var result3 = document.getElementById("div1").querySelectorAll("p,span,em");
+        // document.write(result3);
+        // console.log(result3);
+    </script>
+</body>
+</html>
