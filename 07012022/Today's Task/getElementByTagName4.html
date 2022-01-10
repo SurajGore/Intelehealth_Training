@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree</title>
+</head>
+<body>
+    <p id="myp">I am Para<!-- This is Comment --></p>
+    <h1 class="myh1">I am H1</h1>
+    <div id="mydiv">
+        <span class="myspan">Hello</span>
+    </div>
+    <p class="mah1 para">I am para2</p>
+    <p>Another para</p>
+    <p>New para</p>
+    <h2 class="mah2">I am H2</h2>     
+    <script>
+        //more Specific
+        var getSpan = document.getElementById("mydiv");
+        var result = getSpan.getElementsByTagName("*");
+        //var result = document.getElementById("para").getElementsByTagName("*");
+        document.write(result);
+        console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree</title>
+</head>
+<body>
+    <p id="myp">I am Para<!-- This is Comment --></p>
+    <h1 class="myh1">I am H1</h1>
+    <div id="mydiv">
+        <span class="myspan">Hello</span>
+    </div>
+    <p class="mah1 para">I am para2</p>
+    <p>Another para</p>
+    <p>New para</p>
+    <h2 class="mah2">I am H2</h2>
+    <script>
+        //Whole Document
+        var result = document.getElementsByTagName("*");
+        document.write(result);
+        console.log(result);
+
+        //only Inside Body
+        var result1 = document.body.getElementsByTagName("*");
+        document.write(result1);
+        console.log(result1);
+    </script>
+</body>
+</html>

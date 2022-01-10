@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tree</title>
+</head>
+<body>
+    <p id="myp"> I am Para <!-------This is Comment------> </p>
+    <h1 class="myh1"> I am H1 </h1>
+    <div id="mydiv">
+        <span class="myspan"> Hello </span>
+    </div>
+    <p class="mah1 para">I am para2</p>
+    <p>Another para</p>
+    <p>New Para</p>
+    <h2 class="myh2">I am H2 </h2>
+    <script>
+      
+        // Element
+        document.write("-------Para------- <br>");
+        var para1 = document.getElementById("myp");
+        console.log(para1);
+        document.write(para1.nodeName + "<br>");
+        document.write(para1.nodeValue + "<br>"); 
+        document.write(para1.nodeType + "<br>");
+        console.log(para1.nodeName);
+        console.log(para1.nodeValue);
+        console.log(para1.nodeType);
+
+        // ParaText
+        document.write("-------Text------- <br>");
+        var para1txt = document.getElementById("myp");
+        document.write(para1txt.firstChild.nodeName + "<br>");
+        document.write(para1txt.firstChild.nodeValue + "<br>");
+        document.write(para1txt.firstChild.nodeType + "<br>");
+        console.log(para1txt.firstChild.nodeName);
+        console.log(para1txt.firstChild.nodeValue);
+        console.log(para1txt.firstChild.nodeType);
+
+        // ParaCOMMENT
+        document.write("-------Comment------- <br>");
+        var para1cmt = document.getElementById("myp");
+        document.write(para1cmt.firstChild.nextSibling.nodeName + "<br>");
+        document.write(para1cmt.firstChild.nextSibling.nodeValue + "<br>");
+        document.write(para1cmt.firstChild.nextSibling.nodeType + "<br>");
+        console.log(para1cmt.firstChild.nextSibling.nodeName);
+        console.log(para1cmt.firstChild.nextSibling.nodeValue);
+        console.log(para1cmt.firstChild.nextSibling.nodeType);
+
+        //Access Text Value using nodeValue
+        document.write("---------Access Text Value----------- <br>");
+        var para = document.getElementById("mydiv");
+        document.write(para.firstChild.nodeName + "<br>");
+        document.write(para.firstChild.nodeValue + "<br>");
+        document.write(para.firstChild.nodeType + "<br>");
+        console.log(para.firstChild.nodeName);
+        console.log(para.firstChild.nodeValue);
+        console.log(para.firstChild.nodeType);
+
+        //Set Text Value
+        document.getElementById("myp").firstChild.nodeValue = "This is new Value"
+
+    </script> 
+</body>
+</html>
