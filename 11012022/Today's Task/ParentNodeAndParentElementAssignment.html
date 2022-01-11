@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html id="myid">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tree</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1> We are Learning JS <!-- This is comment --> </h1>
-    <p id="myid1"> I am Paragraph </p>
+    <div id="myid">
+        hello div
+        <h1>We Are Learning Javascript</h1>
+        <!--This is Comment-->
+        <h1>I am h1 </h1>
+    </div>
 
     <script>
         var result  = document.getElementById("myid");
         //console.log(result);
-        var result1 = document.getElementById("myid1");
 
         // It Will return the parent whether parent is element node or not
         //console.log(result.parentNode);
 
         //It will return null if the parent is not an element
-        //console.log(result.parentElement);  //null
+        //log(result.parentElement);  //null
 
         //here both return parent becoz both have parent element
-        console.log(result1.parentNode); //
-        //console.log(result1.parentElement); 
+        //console.log(result.parentNode); //
+        //console.log(result.parentElement);
     </script>
 </body>
 </html>
