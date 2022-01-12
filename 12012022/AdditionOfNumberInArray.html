@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var arr = [1,2,3,4,5]
+        document.write(arr+ "<br><br>")
+        var new_arr = []
+        for(let i = 0; i < arr.length; i++){
+            let a = arr[i] + arr[i+1]
+            document.write(`${arr[i]} + ${arr[i+1]} = ${a} <br>`)
+            new_arr.push(a)
+        }
+        new_arr.pop()
+        console.log(new_arr)
+        document.write(`<br>[${new_arr}]`);
+        </script>
+</body>
+</html>
