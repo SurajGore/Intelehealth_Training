@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myul">
+        <li>Red</li>
+        <li id="item_2">Blue</li>
+        <li>Green</li>
+        
+    </ul>
+    <script>
+
+            var u = document.getElementById("myul");
+            var i = document.getElementById("item_2");
+
+            var delNode = u.removeChild(u.childNodes[1]);
+            var delNode = u.removeChild(u.childNodes[2]);
+           
+            console.log(u);   
+    </script>
+</body>
+</html>

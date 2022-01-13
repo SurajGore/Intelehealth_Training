@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <u id="myul">
+        <li>Item 1</li>
+        <li id="item_2">Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </u>
+        <script>
+            //syntax: parentNode.removeChild(target_node)
+
+            //parentNode.removeChild(target_node)
+            var u = document.getElementById("myul");
+            var i = document.getElementById("item_2");
+
+            //var delNode = u.removeChild(i); //Remove With Specifying ParentNode
+            //console.log(u.children);
+            //var delNode = u.removeChild(u.childNodes[1]); //Remove Without Specifying Child
+            var delNode = u.removeChild(u.childNodes[2]);
+            var delNode = u.removeChild(i); //Remove Without Specifying ParentNode
+            console.log(delNode);
+            console.log(u);
+       </script>
+    </ul>
+</body>
+</html>

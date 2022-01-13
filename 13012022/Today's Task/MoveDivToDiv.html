@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">
+        <p>This is Para</p>
+        <h3>This is h3</h3>
+    </div>
+    <div id="divi">
+
+    </div>
+    <script>
+        //Move h3  
+         var olddiv = document.getElementById("mydiv");
+         var newdiv = document.getElementById("divi");
+         newdiv.appendChild(mydiv.lastElementChild);
+         console.log(mydiv);
+         console.log(divi);
+        
+
+        //Adding The H2, H4, P
+        // var targetNode = document.getElementById("divi");
+        // var df = document.createDocumentFragment();
+        // var nE1Node = document.createElement("h2");
+        // var nE4Node = document.createElement("h4");
+        // var nPNode = document.createElement("P");
+      
+        // nE1Node.textContent = "H2 For Javascript";
+        // nE4Node.textContent = "H4 For Javascript";
+        // nPNode.textContent = "p for javascript";
+
+        // df.appendChild(nE1Node);
+        // df.appendChild(nE4Node);
+        // df.appendChild(nPNode);
+
+        // targetNode.appendChild(df);
+        // console.log(targetNode);
+    </script>
+</body>
+</html>
