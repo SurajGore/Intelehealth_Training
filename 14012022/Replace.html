@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myul">
+        <li>Item 1</li>
+        <li id="item 2">Item 2</li><!--Item N-->
+        <li>Item 3</li>
+        <li>Item 4</li>
+</ul>
+<span id="myspan">span</span>
+<script>
+    //parentNode.repalaceChild(newChild, oldChild);
+    var u = document.getElementById("myul");
+    var i = document.getElementById("item 2");
+    //repalcing with new node
+    //creating a new element
+    // var newChild = document.createElement("li");
+    // newChild.textContent = "Item N";
+    // var repalacedNode = u.replaceChild(newChild, i);
+    // console.log(u);
+    // console.log(repalacedNode);
+
+    //replacing with existing node
+    var pan = document.getElementById("myspan");
+    var repalacedNode = u.replaceChild(pan, i);
+    console.log(u);
+    console.log(repalacedNode);
+</script>
+</body>
+</html>
