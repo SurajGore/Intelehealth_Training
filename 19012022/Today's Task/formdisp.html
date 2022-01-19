@@ -9,12 +9,12 @@
 <body>
     
     <form onsubmit="return validation()">
-        <ul id="myul"></ul>
-        <input type="text" name="fname" id="firstname"placeholder="First Name">
+        <ul id="myul">
+        <input type="text" classname="fname" id="firstname" placeholder="First Name">
         <br><br>
         <p id="errorname" style="color: red;"></p>
 
-        <input type="text" name="lname" id="lastname" placeholder="Last Name">
+        <input type="text" classname="lname" id="lastname" placeholder="Last Name">
         <br><br>
         <p id="errorname1" style="color: red;"></p>
 
@@ -22,16 +22,16 @@
         <br><br>
         <p id="errorpassword" style="color: red;"></p>
 
-        <input type="email" name="" id="email" placeholder="Email">
+        <input type="email" classname="" id="email" placeholder="Email">
         <br><br>
         <p id="erroremail" style="color: red;"></p>
 
-        <input type="text" name="" id="mobile"  placeholder="Phone Number">
+        <input type="text" classname="" id="mobile"  placeholder="Phone Number">
         <br><br>
         <p id="errormobile" style="color: red;"></p>
 
         <input type="button" value="Submit" onclick="validation()">
-        <input type="button" value="Delete" onclick="eraseText()">
+        <input type="button" value="Delete" onclick="deleteChild()">
     </ul>
     </form>
     
@@ -92,13 +92,17 @@
             return false;
         }
     }    
-
-    function eraseText()
-    {
-    document.getElementById("firstname").value = "";
-    document.getElementById("lastname").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("mobile").value = "";
+    function deleteChild() {
+        var e = document.querySelector("ul");
+        var child = e.lastElementChild; 
+        while (child) {
+            e.removeChild(child);
+            child = e.lastElementChild;
+        }
+    }
+    var btn = document.getElementById(
+    "btn").onclick = function() {
+        deleteChild();
     }
     </script>
 </body>
