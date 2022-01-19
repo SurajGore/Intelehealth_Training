@@ -9,7 +9,6 @@
 <body>
     
     <form onsubmit="return validation()">
-        <ul id="myul">
         <input type="text" classname="fname" id="firstname" placeholder="First Name">
         <br><br>
         <p id="errorname" style="color: red;"></p>
@@ -31,8 +30,7 @@
         <p id="errormobile" style="color: red;"></p>
 
         <input type="button" value="Submit" onclick="validation()">
-        <input type="button" value="Delete" onclick="deleteChild()">
-    </ul>
+        <input type="submit" id="submitButton" value="Delete" onclick="Delete();" value="Clear" onclick="clearPage();">
     </form>
     
     <script>
@@ -92,17 +90,11 @@
             return false;
         }
     }    
-    function deleteChild() {
-        var e = document.querySelector("ul");
-        var child = e.lastElementChild; 
-        while (child) {
-            e.removeChild(child);
-            child = e.lastElementChild;
-        }
-    }
-    var btn = document.getElementById(
-    "btn").onclick = function() {
-        deleteChild();
+    function clearPage() {
+    document.getElementById("firstnamr").value = " ";
+    document.getElementById("lastname").value = " ";
+    document.getElementById("email").value = " ";
+    document.getElementById("mobile").value = " ";
     }
     </script>
 </body>
