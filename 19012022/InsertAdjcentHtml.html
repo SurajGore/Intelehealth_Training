@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <h1 id="myh1"> Heading 1 </h1>
+
+        <script>
+            var head = document.getElementById("myh1");
+
+            var myhtml = "<p> Hello World </p>"
+            
+            //head.insertAdjacentHTML('beforebegin', myhtml);
+            //head.insertAdjacentHTML('afterend', myhtml);
+            //head.insertAdjacentHTML('afterbegin', myhtml);
+            head.insertAdjacentHTML('beforeend', myhtml); 
+            console.log(head);
+        </script>
+</body>
+</html>

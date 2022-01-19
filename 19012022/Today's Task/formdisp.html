@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form onsubmit="return validation()">
+        <ul id="myul"></ul>
+        <input type="text" name="fname" id="firstname"placeholder="First Name">
+        <br><br>
+        <p id="errorname" style="color: red;"></p>
+
+        <input type="text" name="lname" id="lastname" placeholder="Last Name">
+        <br><br>
+        <p id="errorname1" style="color: red;"></p>
+
+        <input type="text" name="" id="password" placeholder="Password">
+        <br><br>
+        <p id="errorpassword" style="color: red;"></p>
+
+        <input type="email" name="" id="email" placeholder="Email">
+        <br><br>
+        <p id="erroremail" style="color: red;"></p>
+
+        <input type="text" name="" id="mobile"  placeholder="Phone Number">
+        <br><br>
+        <p id="errormobile" style="color: red;"></p>
+
+        <input type="button" value="Submit" onclick="validation()">
+        <input type="button" value="Delete" onclick="eraseText()">
+    </ul>
+    </form>
+    
+    <script>
+    function validation(){
+        var userfirstname = document.getElementById("firstname").value;
+        console.log(userfirstname);
+
+        var userlastname = document.getElementById("lastname").value;
+        console.log(userlastname);
+
+        var password = document.getElementById("password").value;
+
+        var email1 = document.getElementById("email").value;
+        console.log(email1);
+
+        var mobile1= document.getElementById("mobile").value;
+        console.log(mobile1);
+
+        var usercheck = /^[a-zA-Z @ #. ]{3,30}$/;
+        var usercheck1 = /^[a-zA-Z @ #. ]{3,30}$/;
+		var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+		var emailcheck = /^[A-Za-z_.]{6,}@[A-Za-z]{4,}[.]{1}[A-Za-z.]{2,}$/;
+		var mobilecheck = /^[6789]{1}[0-9]{9}$/;
+
+        if (usercheck.test(userfirstname)){
+            document.getElementById('errorname').innerHTML=" ";
+        }else{
+            document.getElementById('errorname').innerHTML="***Invalid First Name***";
+            return false;
+        }
+
+        if (usercheck1.test(userlastname)){
+            document.getElementById('errorname1').innerHTML=" ";
+        }else{
+            document.getElementById('errorname1').innerHTML="***Invalid Last Name***";
+            return false;
+        }
+
+        if (passwordcheck.test(password)){
+            document.getElementById('errorpassword').innerHTML=" ";
+        }else{
+            document.getElementById('errorpassword').innerHTML="***Invalid Password***";
+            return false;
+        }
+
+        if (emailcheck.test(email1)){
+            document.getElementById('erroremail').innerHTML=" ";
+        }else{
+            document.getElementById('erroremail').innerHTML="***Invalid Email Name***";
+            return false;
+        }
+
+        if (mobilecheck.test(mobile1)){
+            document.getElementById('errormobile').innerHTML=" ";
+        }else{
+            document.getElementById('errormobile').innerHTML="***Invalid Mobile Number*** ";
+            return false;
+        }
+    }    
+
+    function eraseText()
+    {
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("mobile").value = "";
+    }
+    </script>
+</body>
+</html>

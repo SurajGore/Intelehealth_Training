@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">
+        <h1 id="myh1">Heading 1 </h1>
+        <h2 id="myh2">Heading 2 </h2>
+        <h3 id="myh3">Heading 3 </h3>
+    </div>
+    <script>
+        var parentNode = document.getElementById("mydiv");
+        var h = document.getElementById("myh2");
+        var newElement = document.createElement("span");
+        newElement.textContent = "This is span";
+        h.insertAdjacentElement('beforebegin', newElement);
+        //h.insertAdjacentElement('afterend', newElement);
+        //h.insertAdjacentElement('afterbegin', newElement);
+        //h.insertAdjacentElement('beforeend', newElement); 
+        console.log(parentNode);
+    </script>
+</body>
+</html>
