@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Star Rating Project</title>
 <style>
         .divvv
     {
@@ -53,7 +53,7 @@
     <p id="myp">Please Rate <span id="myspan">The Movie</span> </p>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
-    <ul class="list-inline rating-list">
+    <ul class="text-center">
       <li class="star"><i class="fa fa-star" title="Rate 5"></i></li>
       <li class="star"><i class="fa fa-star" title="Rate 4"></i></li>
       <li class="star"><i class="fa fa-star" title="Rate 3"></i></li>
@@ -86,7 +86,7 @@
                 let type = e.type;
                 let starsValue = this.starsValue;
                 if(type === "click"){
-                    if (starsValue > 1){
+                    if (starsValue > 5){
                         rating.innerHTML = "you rated this" + starsValue + "stars";
                     }
                 }
@@ -94,6 +94,7 @@
                     if (type === "click"){
                         if(ind < starsValue){
                             ele.classList.add("fix");
+                
                         }
                         else{
                             ele.classList.remove("fix");
