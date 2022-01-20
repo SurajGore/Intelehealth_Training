@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass1{
+            background-color: blue;
+            font-size:70px;
+        }
+        .myclass2{
+            background-color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p id="myp" class="myclass2" style="color:yellow;">Paragraph</p>
+    <script>
+        var p =document.getElementById("myp");
+        p.className = "myclass1";
+    </script>
+</body>
+</html>

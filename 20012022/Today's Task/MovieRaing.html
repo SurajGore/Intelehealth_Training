@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .divvv
+    {
+    border-radius: 25px; border-color: black; background-color: black; padding: 10px; height: 9px; position:inherit; margin-top: 20px;    margin-left: 20px;
+    }
+
+    .rating-list li {
+    float: right;
+    color:  blue;
+    padding: 10px 5px;
+    }
+    .rating-list li:hover,
+    .rating-list li:hover ~ li {
+    color: #ffd700;
+    }
+    .rating-list {
+    display: inline-block;
+    list-style: none;
+    }
+    .rating__list:hover {
+   filter: drop-shadow(1px 1px 4px gold);
+    }
+
+</style>
+</head>
+<body>
+    <fieldset align="center" padding: "10px"; height: "9px"; position:"inherit"; margin-top: "20px";    margin-left: "20px";>
+    <h1 id="myh1"> Welcome To <span id="span">Movie Ratings</span> </h1>
+    <p id="myp">Please Rate <span id="myspan">The Movie</span> </p>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <ul class="list-inline rating-list">
+      <li><i class="fa fa-star" title="Rate 5"></i></li>
+      <li><i class="fa fa-star" title="Rate 4"></i></li>
+      <li><i class="fa fa-star" title="Rate 3"></i></li>
+      <li><i class="fa fa-star" title="Rate 2"></i></li>
+      <li><i class="fa fa-star" title="Rate 1"></i></li>
+    </ul>
+
+    <div class="divv">
+        <input type="text" class="divvv" name=""  id="value"/>
+    </div>
+    </fieldset>
+
+       <script>       
+           document.getElementById('myh1').style.color = 'blue';
+           document.getElementById('myp').style.color = 'blue';
+           document.getElementById('span').style.color = 'red';
+           document.getElementById('myspan').style.color = 'red';
+ 
+           
+       </script>
+</body>
+</html>

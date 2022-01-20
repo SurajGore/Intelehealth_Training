@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .myclass2{
+            background-color: blue;
+        }
+        .myclass3{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="myp" class="myclass2 myclass3" style="color:yellowgreen;">Paragraph</p>
+    <script>
+        var p = document.getElementById("myp");
+        var elementclass = p.classList;
+        //it will add the given token to the list 
+        //DOMTokenList.add("class_name1", "Class_name2")
+        //add single class
+        elementclass.add("myclass4");
+        console.log(elementclass);
+
+        //add multiple class
+        // elementclass.add("myclass5","myclass6", "myclass7");
+        // console.log(elementclass);
+
+    </script>
+</body>
+</html>
