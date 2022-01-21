@@ -6,27 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Rating Project</title>
 <style>
-        .divvv
+    .divvv
     {
-    border-radius: 25px; border-color: black; background-color: black; padding: 10px; height: 9px; position:inherit; margin-top: 20px;    margin-left: 20px;
+    border-radius: 25px; border-color: black; padding: 20px; height: 9px; position:inherit; margin-top: 20px;    margin-left: 30px;
     }
-
-    /* .rating-list li {
-    float: right;
-    color:  blue;
-    padding: 10px 5px;
-    }
-    .rating-list li:hover,
-    .rating-list li:hover ~ li {
-    color: #ffd700;
-    }
-    .rating-list {
-    display: inline-block;
-    list-style: none;
-    }
-    .rating__list:hover {
-   filter: drop-shadow(1px 1px 4px gold);
-    } */
 
 .star{
     font-size: 30px;
@@ -45,15 +28,16 @@
      margin: 30px 0;
      font-weight: bold;
 }
+
 </style>
 </head>
 <body>
     <fieldset align="center" padding: "10px"; height: "9px"; position:"inherit"; margin-top: "20px";    margin-left: "20px";>
     <h1 id="myh1"> Welcome To <span id="span">Movie Ratings</span> </h1>
-    <p id="myp">Please Rate <span id="myspan">The Movie</span> </p>
+    <p id="myp">Please Rate The <span id="myspan"> Movie</span> </p>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-
-    <ul class="text-center">
+        
+    <ul class="text-center" id="rated">
       <li class="star"><i class="fa fa-star" title="Rate 5"></i></li>
       <li class="star"><i class="fa fa-star" title="Rate 4"></i></li>
       <li class="star"><i class="fa fa-star" title="Rate 3"></i></li>
@@ -62,7 +46,7 @@
     </ul>
 
     <div class="divv">
-        <input type="text" class="divvv" name=""  id="value"/>
+        <input type="text" class="divvv" name=""  id="rate"/>
     </div>
     </fieldset>
 
@@ -71,7 +55,16 @@
            document.getElementById('myp').style.color = 'blue';
            document.getElementById('span').style.color = 'red';
            document.getElementById('myspan').style.color = 'red';
- 
+           document.getElementById("rated").addEventListener("click", function(){
+            fun();
+           });
+           function fun() {
+           var a = prompt("Please Tell Us More About It");
+           console.log("text box value",a);
+           if (a != null) {
+            document.getElementById("rate").value =  " " + a + "Thank You And Have A Nice Day";
+           }
+           }
             const stars = document.querySelectorAll(".star");
             const rating = document.querySelector(".rating");
 
@@ -83,18 +76,19 @@
             }
 
             function starRate(e){
+               
                 let type = e.type;
                 let starsValue = this.starsValue;
                 if(type === "click"){
                     if (starsValue > 5){
-                        rating.innerHTML = "you rated this" + starsValue + "stars";
+                        rating.innerHTML = "You Rated This" + starsValue + "stars";
                     }
                 }
                 stars.forEach(function(ele, ind){
                     if (type === "click"){
-                        if(ind < starsValue){
+                        if(ind < starsValue)
+                        {
                             ele.classList.add("fix");
-                
                         }
                         else{
                             ele.classList.remove("fix");

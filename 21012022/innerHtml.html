@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="d">
+       <ul id="myul">
+           <li>Item 1</li>
+           <li>Item 2</li>
+           <li>Item 3</li>
+           <li>Item 4</li>
+       </ul>
+   </div> 
+
+   <p id="para">Paragraph</p>
+   <div id="div1"></div>
+
+   <div id="div2">
+       <p>Hello</p>
+       <p>World</p>
+   </div>
+
+   <script>
+       var u = document.getElementById("myul");
+       console.log(u); //show ul with li
+       console.log(u.innerHTML); //show all innner html ul
+       u.innerHTML= ""; //to get  //will set/replace  empty string in innner HTML of ul
+       console.log(u.innerHTML); //ul innerHTML has set to empty //so nothing will show
+        console.log(u);
+        u.innerHTML = "<li>java</li><li>CSS</li><li>JS</li>"
+        console.log(u.innerHTML);
+        p1 = document.getElementById("para");
+        p1.textContent = "HEllo Para";
+        document.getElementById("div1").innerHTML="Hello Div";
+
+        var div1 = document.getElementById("d");
+        console.log(div1.outerHTML);
+        u.outerHTML="";
+        console.log(u);
+        u.outerHTML = "<ul><li>Hello para</li></ul>";
+        console.log(div1);
+
+        innerText()
+        console.log(u.innerText);
+        console.log(u.childNodes);
+
+        u.innerText = "This is Text";
+        console.log(u);
+
+        outerHTML
+        console.log(u.outerHTML);
+
+        var div2 = document.getElementById('div2');
+        console.log(div2.outerText);
+        console.log(div2.outerText="pune");
+        console.log(div2);
+   </script>
+</body>
+</html>

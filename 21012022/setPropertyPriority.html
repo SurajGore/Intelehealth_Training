@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp" style="background-color: darkgrey; color:black !important;">Paragraph</p>
+    <script>
+        var p = document.getElementById("myp");
+        var cs = p.style;
+        //console.log(cs);
+
+        //It Returns a DOMString that provides all explicitly set priorities on the CSS Property. 
+        var propPriority = cs.getPropertyValue('color');
+        console.log(propPriority);
+        //console.log(p);
+    </script>
+</body>
+</html>
