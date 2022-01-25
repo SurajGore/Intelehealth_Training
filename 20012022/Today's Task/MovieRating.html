@@ -30,6 +30,35 @@
 }
 
 </style>
+
+<!-- <title>Movie ticket booking</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		fieldset
+		{
+			height: 450px;
+			width: 800px;
+		}
+
+		p{
+			background-color: black;
+			height:50px;
+			width: 500px;
+			border-radius: 15px;
+			position: absolute;
+			margin-left: 150px;
+			margin-top: 200px;
+			color: #05fad5  ;
+			font-size:25px;
+		}
+
+		i:hover{
+			transform: scale(1.5);
+			cursor: pointer;
+		}
+
+	</style> -->
 </head>
 <body>
     <fieldset align="center" padding: "10px"; height: "9px"; position:"inherit"; margin-top: "20px";    margin-left: "20px";>
@@ -108,5 +137,61 @@
 
             }
        </script>
+
+	<!-- <fieldset align="center">
+		<h1 style="color:#05fad5;">Welcome to <i style="color: red;">Movie Ratings</i></h1>
+		<h2 style="color:#05fad5;">Please Rate the <span style="color:red;">Movie</span></h2>
+		<div id="mydiv">
+			<i class="fa fa-star-o fa-3x" style="color:#05fad5;" id="s1"></i> 
+			<i class="fa fa-star-o fa-3x" style="color:#05fad5;" id="s2"></i> 
+			<i class="fa fa-star-o fa-3x" style="color:#05fad5;" id="s3"></i>
+			<i class="fa fa-star-o fa-3x" style="color:#05fad5;" id="s4"></i>
+			<i class="fa fa-star-o fa-3x" style="color:#05fad5;" id="s5"></i>
+		</div>
+		<p id="myp"></p>
+	</fieldset>
+
+	<script type="text/javascript">
+		const ratingStars = [...document.getElementsByClassName("fa")];
+
+		function executeRating(stars)
+		{
+ 			const starClassActive = "fa fa-star fa-3x";
+  			const starClassInactive = "fa fa-star-o fa-3x";
+  			const starsLength = stars.length;
+  			let i;
+  			stars.map((star) => 
+  			{
+    			star.onclick = () => 
+    			{
+      				i = stars.indexOf(star);
+      				if(i<3)
+      				{
+      					var txt=prompt("write something more about it");
+      					document.getElementById("myp").innerHTML=txt;
+      				}
+      				else if(i==3)
+      				{
+      					document.getElementById("myp").innerHTML="Rated 4 ,Thanks for your feedback!!!";	
+      				}
+      				else if(i==4)
+      				{
+      					document.getElementById("myp").innerHTML="Rated 5 ,Thanks alot for your feedback!!!";	
+      				}
+      				if (star.className===starClassInactive) 
+      				{
+       	 				for (i; i >= 0; --i) 
+       	 					stars[i].className = starClassActive;
+      				} 
+      				else
+      				{
+       					for (i; i < starsLength; ++i)
+       						stars[i].className = starClassInactive;
+      				}
+    			};
+ 			});
+ 		}	
+		executeRating(ratingStars);
+	</script> -->
 </body>
 </html>
