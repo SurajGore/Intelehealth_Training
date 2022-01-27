@@ -10,12 +10,12 @@
 
    <h1 align="center" style="color:red"><b> Budget Management </b></h1> 
 
-<form>
+
     <div style="width: 350px; height:inherit; background-color:#d4a05c;border-radius: 10px; border: 2px solid ; padding: 10px;">
         <fieldset>
              <legend>Enter Your Budget</legend> 
              Enter Budget: <input id="budget1">
-             <button onclick="btn1()" id="button1">Budget</button>
+             <button onclick="btn()" id="button1">Budget</button>
          </fieldset>
     </div>
 <br></br>
@@ -42,22 +42,39 @@
         <legend>Expenses</legend>
         <label>Expenses Name :</label> <input type="text" id="exname">
         <label>Expenses Amt :</label> <input type="text" id="examt">
-         <br><br>"
+         <br><br>
          <button onclick="Exp()" id = "exp">Expenses</button>
     </fieldset>
 
-    <fieldset style="height: 10px; width: 10px;"> <legend>Expenses info</legend> </fieldset>
+    <fieldset style="height: 150px; width: 150px;"> <legend>Expenses info</legend> <div id="ExpenseList"></div> </fieldset>
 </div>
-</form>
+
 
 <script>
 
     function btn() {
         var a = document.getElementById("budget1").value;
         var myTable = document.getElementById('mytd');
-         myTable.rows[0].cells[0].innerText = a;
+         myTable.innerText = "Budget Table:" + a;
     }
 
+	let Expenses  ={};
+	
+	function Exp(){
+	var ExpenseName = document.getElementById("exname").value;
+	var expenseAmount = document.getElementById("examt").value;
+		
+	var ExpenseList = document.getElementById("ExpenseList");
+	var ExpleseText = ExpenseList.innerText;
+	if (ExpleseText != "")
+	{
+	ExpenseList.innerHTML = ExpleseText + " <br/> " + ExpenseName + ":" + expenseAmount;
+	}
+	else
+	{
+	ExpenseList.innerHTML = ExpenseName + ":" + expenseAmount;
+	}
+	}
 </script>
 </body>
 </html>
