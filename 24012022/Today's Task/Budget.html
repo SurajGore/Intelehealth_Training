@@ -46,13 +46,14 @@
          <button onclick="Exp()" id = "exp">Expenses</button>
     </fieldset>
 
-    <fieldset style="height: 150px; width: 150px;"> <legend>Expenses info</legend> <div id="ExpenseList"></div> </fieldset>
+    <fieldset style="height: 150px; width: 150px;"> <legend>Expenses info</legend> <div id="ExList"></div> </fieldset>
 </div>
 
 
 <script>
 
-    function btn() {
+    function btn() 
+    {
         var a = document.getElementById("budget1").value;
         var myTable = document.getElementById('mytd');
          myTable.innerText = "Budget Table:" + a;
@@ -60,19 +61,20 @@
 
 	let Expenses  ={};
 	
-	function Exp(){
+	function Exp()
+    {
 	var ExpenseName = document.getElementById("exname").value;
-	var expenseAmount = document.getElementById("examt").value;
+	var ExpenseAmount = document.getElementById("examt").value;
 		
-	var ExpenseList = document.getElementById("ExpenseList");
+	var ExpenseList = document.getElementById("ExList");
 	var ExpleseText = ExpenseList.innerText;
-	if (ExpleseText != "")
+	if (ExpleseText != " ")
 	{
-	ExpenseList.innerHTML = ExpleseText + " <br/> " + ExpenseName + ":" + expenseAmount;
+	ExpenseList.innerHTML = ExpleseText + " <br/> " + ExpenseName + ":" + ExpenseAmount;
 	}
 	else
 	{
-	ExpenseList.innerHTML = ExpenseName + ":" + expenseAmount;
+	ExpenseList.innerHTML = ExpenseName + ":" + ExpenseAmount;
 	}
 	}
 </script>
