@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        video
+        {
+            width: 400px;
+            height: 300px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <video id="vd1" controls>
+        <source src="FileName.mp4"> </source>
+    </video>
+    <br><br>
+    <input type="button" value="Play video" onclick="fun1()">
+    <input type="button" value="Pause video" onclick="fun2()">
+    <input type="button" value="Current time" onclick="fun3()">
+    
+    <script>
+        vd1 = document.getElementById("vd1");
+        function fun1()
+        {
+            vd1.play();
+        }
+        function fun2()
+        {
+            vd1.pause();
+        }
+        function fun3()
+        {
+            alert(vd1.currentTime);
+        }
+    </script>
+</body>
+</html>

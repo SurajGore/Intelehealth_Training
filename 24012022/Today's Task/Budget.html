@@ -7,47 +7,57 @@
     <title></title>
 </head>
 <body>
-   <h1 align="center" style="color:rgb(155, 32, 32)"><b> Budget Management </b></h1> 
+
+   <h1 align="center" style="color:red"><b> Budget Management </b></h1> 
+
 <form>
     <div style="width: 350px; height:inherit; background-color:#d4a05c;border-radius: 10px; border: 2px solid ; padding: 10px;">
-   <fieldset>
-       <legend>Enter Your Budget</legend> 
-    <p>Enter Budget: <input id="char"></p>
-    <button onclick="addrow()" id="btn">Budget</button>
-    </fieldset>
+        <fieldset>
+             <legend>Enter Your Budget</legend> 
+             Enter Budget: <input id="budget1">
+             <button onclick="btn1()" id="button1">Budget</button>
+         </fieldset>
     </div>
-</form>
-<br><br>
+<br></br>
 
-<form style="width: 350px; height:inherit; border-radius: 10px; border: 2px solid ; padding: 10px;">
+<div style="width: 350px; height:inherit; border-radius: 10px; border: 2px solid ; padding: 10px;">
         <table border="1" id="table" text align="center">
             <thead>
-            <tr>
-            <td colspan="5" text align="center">Budget Table:</td>
-            </tr>
-            <tr>
-              <th>Budget Amt.</th>
-              <th>Expenses Name</th>
-              <th>Expenses Amt.</th>
-              <th>Remaining Amt.</th>
-            </tr>
+                <tr>
+                   <th colspan="5" text align="center" id="mytd">Budget Table:</th>
+                </tr>
+                <tr>
+                    <td>Budget Amt.</td>
+                    <td>Expenses Name</td>
+                    <td>Expenses Amt.</td>
+                    <td>Remaining Amt.</td>
+                </tr>
             </thead>
-          </table>
- </form>
- <br><br>
-<form style= "width: 500px; height:inherit; background-color:#3cbb80; border-radius: 10px; border: 2px solid ; padding: 10px;">
+        </table>
+</div>
+<br><br>
+
+<div style= "width: 500px; height:inherit; background-color:#3cbb80; border-radius: 10px; border: 2px solid ; padding: 10px;">
    <fieldset style="float: Center; height: 150px; width: 150px;">
-    <legend>Expenses</legend>
-    <label>Expenses Name :</label> <input type="text" id="char">
-    <label>Expenses Amt :</label> <input type="text" id="number">
-    <br><br>
-    <button onclick="Exp()">Expenses</button>
+        <legend>Expenses</legend>
+        <label>Expenses Name :</label> <input type="text" id="exname">
+        <label>Expenses Amt :</label> <input type="text" id="examt">
+         <br><br>"
+         <button onclick="Exp()" id = "exp">Expenses</button>
     </fieldset>
+
     <fieldset style="height: 10px; width: 10px;"> <legend>Expenses info</legend> </fieldset>
+</div>
 </form>
 
 <script>
-    
+
+    function btn() {
+        var a = document.getElementById("budget1").value;
+        var myTable = document.getElementById('mytd');
+         myTable.rows[0].cells[0].innerText = a;
+    }
+
 </script>
 </body>
 </html>
