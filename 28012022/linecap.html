@@ -15,8 +15,9 @@
         context.beginPath();
         context.moveTo(200, 200);
         context.lineTo(200, 400);
-        context.lineWidth=40;
-        context.linecap='round';
+        context.lineWidth = 40;
+        context.linecap='round';//bydefault butt/round/square(for round add semicircle top and 
+            // bottom of line. radius will br half of draw lineWith)
         context.stroke();
     }
     window.addEventListener ('load', drawDiagonal, false);

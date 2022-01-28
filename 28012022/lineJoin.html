@@ -8,20 +8,21 @@
     <script type="text/javascript">
         function drawDiagonal(){
             var canvas = document.getElementById('diagonal');
+              //console.log(canvas);
             var context = canvas.getContext('2d');
 
         //being pathname
-        //context.beginPath();
+        context.beginPath();
         context.moveTo(100, 100);
         context.lineTo(400, 400);
         context.lineTo(700, 100);
         context.lineWidth=30;
-        context.linecap='round';
-        context.linejoin='bevel';
+        context.linecap='round';//bydefault butt/round/square
+        context.linejoin='bevel';//bydefault miter/round/bevel
         //context.closePath();
         context.stroke();
     }
-        window.addEventListener('load', drawDiagonal, false);
+        window.addEventListener("load", drawDiagonal, false);
     </script>
 </head>
 <body>
