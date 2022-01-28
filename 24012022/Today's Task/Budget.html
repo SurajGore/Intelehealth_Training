@@ -14,7 +14,7 @@
     <div style="width: 350px; height:inherit; background-color:#d4a05c;border-radius: 10px; border: 2px solid ; padding: 10px;">
         <fieldset>
              <legend>Enter Your Budget</legend> 
-             Enter Budget: <input id="budget1">
+             Enter Budget: <input id="budget1" onkeypress="return isNumber(event)">
              <button onclick="btn()" id="button1">Budget</button>
          </fieldset>
     </div>
@@ -33,6 +33,7 @@
                     <td>Remaining Amt.</td>
                 </tr>
             </thead>
+			
         </table>
 </div>
 <br><br>
@@ -41,41 +42,86 @@
    <fieldset style="float: Center; height: 150px; width: 150px;">
         <legend>Expenses</legend>
         <label>Expenses Name :</label> <input type="text" id="exname">
-        <label>Expenses Amt :</label> <input type="text" id="examt">
+        <label>Expenses Amt :</label> <input type="text" id="examt" onkeypress="return isNumber(event)">
          <br><br>
          <button onclick="Exp()" id = "exp">Expenses</button>
     </fieldset>
 
-    <fieldset style="height: 150px; width: 150px;"> <legend>Expenses info</legend> <div id="ExList"></div> </fieldset>
+    <fieldset style="height: 150px; width: 150px;"> <legend>Expenses info</legend> <div id="ExpenseList"></div> </fieldset>
 </div>
 
 
 <script>
 
-    function btn() 
-    {
-        var a = document.getElementById("budget1").value;
+    function btn() {
+	    var a = document.getElementById("budget1").value;
+		
+		if (a == null || a == "")
+		{
+			alert("Please Enter Budget Amount");
+			return;
+		}
+		
+		ExpenseBudget = a;
         var myTable = document.getElementById('mytd');
          myTable.innerText = "Budget Table:" + a;
+		 
     }
 
-	let Expenses  ={};
+	//Declare Global Variable to set Expense Budget
+	var ExpenseBudget = 0;
 	
-	function Exp()
-    {
-	var ExpenseName = document.getElementById("exname").value;
-	var ExpenseAmount = document.getElementById("examt").value;
+	function Exp(){		
+		var ExpenseName = document.getElementById("exname").value;
+		var expenseAmount = document.getElementById("examt").value;
 		
-	var ExpenseList = document.getElementById("ExList");
-	var ExpleseText = ExpenseList.innerText;
-	if (ExpleseText != " ")
-	{
-	ExpenseList.innerHTML = ExpleseText + " <br/> " + ExpenseName + ":" + ExpenseAmount;
-	}
-	else
-	{
-	ExpenseList.innerHTML = ExpenseName + ":" + ExpenseAmount;
-	}
+		if (ExpenseBudget == 0)
+		{
+			alert("Please Enter Budget");
+			return;
+		}
+		
+		if (expenseAmount == null || expenseAmount == "")
+		{
+			alert("Please Enter Expense Amount");
+			return;
+		}
+			
+		var ExpenseList = document.getElementById("ExpenseList");
+		var ExpleseText = ExpenseList.innerText;
+		if (ExpleseText != "")
+		{
+			ExpenseList.innerHTML = ExpleseText + " <br/> " + ExpenseName + ":" + expenseAmount;
+		}
+		else
+		{
+			ExpenseList.innerHTML = ExpenseName + ":" + expenseAmount;
+		}
+		
+		//Add Data to Table
+		var ExpenseTable = document.getElementById("table");
+		var totalRowCount = ExpenseTable.rows.length;
+		
+		//Add Row to Table
+		var row = ExpenseTable.insertRow(totalRowCount);
+		//Add Cells to Table
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+
+		//Calculate Remaining Budget
+		var RemainingBudget = ExpenseBudget - expenseAmount;
+		
+		//Assign Values to Cells
+		cell1.innerHTML = ExpenseBudget;
+		cell2.innerHTML = ExpenseName;
+		cell3.innerHTML = expenseAmount;
+		cell4.innerHTML = RemainingBudget;
+		
+		//Reduce expense Amount from Global Variable ExpenseBudget Variable 
+		ExpenseBudget = ExpenseBudget - expenseAmount;
+			
 	}
 </script>
 </body>
