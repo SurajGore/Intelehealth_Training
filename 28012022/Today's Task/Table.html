@@ -7,25 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <table border="1" id="table" text align="center">
-        <thead>
-            <tr  text align="center" ><b>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Description</td>
-                </b>
-            </tr>
-        </thead>
-    </table>
-
+    <div>
+    <button>Get</button>
+    <div id="table"></div>
+    </div>
     <script>
-        var arr = [{id = 101, name = "pen", description = 'Red color'},
+        let arr = [{id = 101, name = "pen", description = 'Red color'},
                    {id = 102, name = 'Notebook', description = 'Blue color'},
                    {id = 103, name = 'Book', description = 'Yellow color'},
                    {id = 104, name = 'Eraser', description = 'White color'},
                    {id = 105, name ='Pencil', description = 'Black color'}]
+        let headers =['ID', 'Name', 'Description'];
 
-                   document.write(arr, + "<br/>");
 
     </script>
 </body>
