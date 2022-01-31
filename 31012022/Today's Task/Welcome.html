@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="trails" width="1200" height="200" style="border: 1px solid"/>
+    <script>
+   
+    var canvas=document.getElementById("trails");
+     var context=canvas.getContext("2d");
+    //add the text
+    context.font="60px impact";
+    context.fillStyle="#996600";
+    context.textAlign="center";
+    context.fillText("Welcome To HTML5!",600,125,400);
+    context.stroke();    
+    </script>
+</body>
+</html>

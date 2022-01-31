@@ -32,19 +32,19 @@
 </head>
 <body>
     <div>
-    <button type="button" onclick="btn()">Get</button>
-    <div id="table"></div>
+        <button type="button" onclick="btn()">Get</button>
+        <div id="table"></div>
     </div>
     <script>
         function btn(){
         let btnGet = document.querySelector('button');
         let myTable = document.querySelector('table');
 
-        let arr = [{id = 101, name = "pen", description = 'Red color'},
-                   {id = 102, name = 'Notebook', description = 'Blue color'},
-                   {id = 103, name = 'Book', description = 'Yellow color'},
-                   {id = 104, name = 'Eraser', description = 'White color'},
-                   {id = 105, name ='Pencil', description = 'Black color'}]
+        let arr = [{ name: 'pen', id: 101, description: 'Red color'},
+                   { name: 'Notebook', id: 102, description: 'Blue color'},
+                   { name: 'Book', id: 103, description: 'Yellow color'},
+                   { name: 'Eraser', id: 104, description: 'White color'},
+                   { name: 'Pencil', id: 105, description: 'Black color'}]
 
         let headers =['ID', 'Name', 'Description'];
         
@@ -53,13 +53,13 @@
             let table = document.createElement('table');
             let headerRow = document.createElement('tr');
 
-            headers.forEach(headerText =>
-             {
+            headers.forEach(headerText =>{
                 let header = document.createElement('th');
                 let textNode = document.createTextNode(headerText);
                 header.appendChild(textNode);
                 headerRow.appendChild(header);
             });
+
             table.appendChild(headerRow);
 
             employees.forEach(emp =>{
@@ -77,7 +77,6 @@
             myTable.appendChild(table);
         });
     }
-
     </script>
 </body>
 </html>

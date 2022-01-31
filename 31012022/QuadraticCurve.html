@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px dotted;"></canvas>
+    <script type="text/javascript">
+        window.onload = canvas;
+        function canvas ()
+        {
+            var myCanvas = document.getElementById("myCanvas");
+            //if (myCanvas && myCanvas.getContext("2d"))
+            {
+                var context = myCanvas.getContext("2d");
+
+                //context.translate(100,200);
+                //context.lineWidth = 6;
+                context.beginPath();
+                context.moveTo(10,150);
+                context.quadraticCurveTo(40,50,180,190);
+                context.lineWidth = "5";
+                context.strokeStyle = "red";
+                context.fillStyle = "yellow";
+                context.stroke();
+                context.fill();
+
+                // control point
+                context.lineWidth=1;
+                //context.beginPath();
+                context.moveTo(10, 150);
+                context.lineTo(40, 50);
+                context.lineTo(180, 190);
+                context.strokeStyle = 'pink';
+                context.stroke();
+            }
+        }
+    </script>
+</body>
+</html>

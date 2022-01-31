@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<canvas id="mycanvas" style="border:1px solid;" width="470px" height="460x" ></canvas>
+
+</head>
+<body>
+	<script type="text/javascript">
+	var c=document.getElementById("mycanvas");
+		var ctx=c.getContext("2d");
+		//blue sqare
+		ctx.beginPath();
+		ctx.lineWidth='4';
+		ctx.strokeStyle='blue';
+		ctx.rect(30,30,400,400);
+		ctx.stroke();
+		ctx.fillStyle='blue';
+		ctx.fill();
+
+
+		//red rectangle
+		ctx.beginPath();
+		ctx.lineWidth='5';
+		ctx.strokeStyle='red';
+		ctx.rect(100,100,250,250);
+		ctx.fillStyle='red';
+		ctx.fill();
+
+		//green sqare
+		ctx.beginPath();
+		ctx.lineWidth='4';
+		ctx.strokeStyle='green';
+		ctx.rect(150,150,150,150);
+		ctx.stroke();
+		ctx.fillStyle='green';
+		ctx.fill();
+
+
+		//purple rectangle
+		ctx.beginPath();
+		ctx.lineWidth='5';
+		ctx.strokeStyle='black';
+		ctx.rect(170,210,110,30);
+		ctx.stroke();
+		ctx.fillStyle='black';
+		ctx.fill();
+	</script>
+
+</body>
+</html>

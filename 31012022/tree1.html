@@ -1,0 +1,127 @@
+<html>
+
+<head>
+</head>
+<script>
+	function createCanopyPath(context)
+	{   
+	context.beginPath();
+       context.moveTo(-25,-50);
+       context.lineTo(-10,-80);
+       context.lineTo(-20,-80);
+       context.lineTo(-5,-110);
+       context.lineTo(-15,-110);
+       context.lineTo(0,-140);
+       context.lineTo(15,-110);
+       context.lineTo(5,-110);
+       context.lineTo(20,-80);
+       context.lineTo(10,-80);
+       context.lineTo(25,-50);
+       context.closePath();
+       
+	}
+	function drawTree(context)
+  	{
+   	var trunkGrad=context.createLinearGradient(-15,-90,10,-50);
+     	trunkGrad.addColorStop(0,"#663300");
+     	trunkGrad.addColorStop(0.4,"#996600");
+     	trunkGrad.addColorStop(1,"#552200");
+     	context.fillStyle=trunkGrad;
+     	context.fillRect(-10,-50,10,50);
+    createCanopyPath(context);
+	//outline of tree
+      context.lineWidth=3;
+       context.strokeStyle="yellow";//leaves outline
+       context.lineJoin="miter";
+       context.stroke();
+
+     context.fillStyle="green";//leaves
+      
+      createCanopyPath(context);
+       context.fill(); 
+ }
+
+function drawTrails()
+{
+     var canvas=document.getElementById("trails");
+     var context=canvas.getContext("2d");
+
+     context.save();
+    
+	context.translate(130,250);
+	drawTree(context);
+
+   //draw another tree
+     context.restore();
+     context.save();
+     context.translate(250,300);
+     context.scale(0.6,1);
+     context.rotate(0.2);//50dergree
+     drawTree(context);
+     context.restore();
+     
+     context.save();
+     context.translate(90,300);
+     context.scale(0.6,0.5);
+     drawTree(context);
+
+     context.restore();
+     context.save();
+     context.translate(90,150);
+     context.scale(0.6,0.5);
+     drawTree(context);
+
+//
+     context.restore();
+     context.save();
+     context.translate(40,300);
+     context.scale(1,2);
+     drawTree(context);
+
+     context.restore();
+     context.save();
+     context.translate(250,300);
+     context.scale(2,0.5);
+     context.rotate(-0.1);
+     drawTree(context);
+
+     context.restore();
+     context.save();
+	context.translate(100,250);
+	context.scale(1.5,1.5);
+	drawTree(context);
+    context.restore();
+	context.save(); 
+//draw the curve 
+     context.translate(10,250);
+     context.beginPath();
+     context.moveTo(0,0);
+     context.quadraticCurveTo(170,-50,260,-190);
+     context.quadraticCurveTo(310,-250,410,-250);
+     context.lineWidth=20;
+     context.strokeStyle="#663300";
+     context.linejoin="round";
+     context.stroke();
+
+     //add the text
+     context.restore();
+     context.save();
+
+     context.font="60px impact";
+     context.fillStyle="#996600";
+     context.textAlign="center";
+     context.shadowColor="rgba(0,0,0,0.2)";
+     context.shadowOffsetX=50;
+     context.shadowOffsetY=-10;
+     context.shadowBlur=4;
+     context.fillText("My Forest",200,70,400);
+  
+}
+	</script>
+	
+	<body onload="drawTrails()">
+	<canvas id="trails" width="400" height="400" style="border:1px solid"/>
+	</body>
+</html>
+
+

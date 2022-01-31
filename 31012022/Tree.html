@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="trails" width="400" height="400" style="border: 1px solid"/>
+
+    <script type="text/javascript">
+        function createCanopyPath(context)
+        {
+            context.beginPath();
+            context.moveTo(-25,-50);
+            context.lineTo(-10, -80);
+            context.lineTo(-20, -80);
+            context.lineTo(-5, -110);
+            context.lineTo(-15, -110);
+            context.lineTo(0, -140);
+            context.lineTo(15, -110);
+            context.lineTo(5, -110);
+            context.lineTo(20, -80);
+            context.lineTo(10, -80);
+            context.lineTo(25, -50);
+
+            context.closePath();
+        }
+
+        function drawTrails()
+        {
+            var canvas = document.getElementById("trails");
+            //console.log(canvas);
+            var context = canvas.getContext("2d");
+
+            context.translate(200,250);
+            createCanopyPath(context);
+
+            context.stroke();
+            //context.restore();
+        }
+        window.addEventListener('load', drawTrails,false);
+    </script>
+</body>
+</html>
