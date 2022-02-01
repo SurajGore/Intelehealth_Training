@@ -1,46 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html>
+<head><title>HTML5 Canvas - shadow</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="600" height="600" style="border:1px solid black">Your Browser Does Not Support The HTML5 canvas tag</canvas></canvas>
-    <script>
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-
-        //red rectangle
-        ctx.beginPath();
-        ctx.linewidth = "6";
-        ctx.strokeStyle = "red";
-        ctx.rect(60,60,300,300);
-        ctx.stroke();
-        ctx.fillStyle = 'lightblue';
-        ctx.fill();
-        
-        ctx.restore();
-        ctx.save();
-        ctx.beginPath();
-        ctx.linewidth = "6";
-        ctx.strokeStyle = "green";
-        ctx.rect(40,40,300,300);
-        ctx.stroke();
-        ctx.fillStyle = 'green';
-        ctx.fill();
-
-        // context.restore();
-        // context.save();
-        // ctx.beginPath();
-        // ctx.linewidth = "6";
-        // ctx.strokeStyle = "pink";
-        // ctx.rect(20,20,300,300);
-        // ctx.stroke();
-        // ctx.fillStyle = 'pink';
-        // ctx.fill();
-
-    </script>
-</body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas> 
+<script>
+var canvas = document.getElementById("DemoCanvas");
+if (canvas.getContext) 
+{
+var ctx = canvas.getContext('2d');
+ctx.shadowColor = "black";
+ctx.shadowBlur = 6;
+ctx.shadowOffsetX = 6;
+ctx.shadowOffsetY = 6;
+ctx.shadowColor = "orange";
+ctx.strokeRect(25, 25, 200, 200);
+ctx.shadowColor = "green";
+ctx.strokeRect(50, 50, 200, 200);
+ctx.shadowColor = "blue";
+ctx.strokeRect(75, 75, 200, 200);
+ctx.shadowColor = "red";
+ctx.strokeRect(100, 100, 200, 200);
+}
+</script>
+</body> 
 </html>

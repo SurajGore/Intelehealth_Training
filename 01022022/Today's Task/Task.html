@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" classname="fname" id="firstname" placeholder="First Name">
+    <br><br>
+    <p id="errorname" style="color: red;"></p>
+    <input type="button" value="How's Your Personality" onclick="validation()">
+    <script>
+        function validation(){
+        var userfirstname = document.getElementById("firstname").value;
+        console.log(userfirstname);
+        var usercheck = /^[a-zA-Z @ #. ]{3,30}$/;
+        if (usercheck.test(userfirstname)){
+            document.getElementById('errorname').innerHTML=" ";
+        }else{
+            document.getElementById('errorname').innerHTML="***Invalid First Name***";
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>
