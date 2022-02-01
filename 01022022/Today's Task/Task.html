@@ -7,19 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" classname="fname" id="firstname" placeholder="First Name">
+    <input type="text" classname="name" id="name" placeholder="Name">
     <br><br>
     <p id="errorname" style="color: red;"></p>
     <input type="button" value="How's Your Personality" onclick="validation()">
     <script>
         function validation(){
-        var userfirstname = document.getElementById("firstname").value;
+        var userfirstname = document.getElementById("name").value;
         console.log(userfirstname);
         var usercheck = /^[a-zA-Z @ #. ]{3,30}$/;
         if (usercheck.test(userfirstname)){
             document.getElementById('errorname').innerHTML=" ";
         }else{
-            document.getElementById('errorname').innerHTML="***Invalid First Name***";
+            document.getElementById('errorname').innerHTML="***Invalid Name***";
             return false;
         }
     }
