@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg width="400" height="400">
+        <!-- <g transform="translate(60,0) rotate(45) scale(0.75)"
+        id="shapegroup">
+        <rect x="10" y="20" height="80" width="80" style="fill:yellow; stroke-width: 2; stroke:red"/>
+        <circle cx="120" cy="80" r="40" stroke="green" stroke-width="2" fill="yellow">
+    </g> -->
+
+     <!-- it defines contents for future use. it has an element named use -->
+    <defs>
+        <g id="shapegroup">
+        <rect x="10" y="20" height="80" width="100" style="fill:yellow; stroke-width: 2; stroke:red"/>
+        <circle cx="120" cy="80" r="40" stroke="green" stroke-width="2" fill="yellow">
+        </g>
+    </defs>
+
+    <use xlink:herf="#shapegroup" transform="translate(150,0) rotate(45) scale(0.5)"/>
+    <use xlink:herf="#shapegroup" transform="translate(120,80) scale(0.4)"/>
+    <use xlink:herf="#shapegroup" transform="translate(20,60) scale(0.25)"/>
+    </svg>
+</body>
+</html>
