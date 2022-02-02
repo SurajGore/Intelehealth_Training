@@ -65,19 +65,18 @@
         lovdata = Math.floor(lovdata);
         document.getElementById('lovevalue').value = lovdata + "%"; 
         document.getElementById("lovevalue").style.width = lovdata + "%";
-    //     if(lovdata<=35)
-    //     {
-    //     document.getElementById("lovevalue").style.backgroundColor = "blue";
-    //     }
-    //     else if(lovdata>35 && lovdata<=65)
-    //     {
-    //     document.getElementById("lovevalue").style.backgroundColor = "orange";
-    //     }
-    //     else
-    //     {document.getElementById("lovevalue").style.backgroundColor = "red";}
-    // }
+        if(lovdata<=35)
+        {
+        document.getElementById("lovevalue").style.backgroundColor = "blue";
+        }
+        else if(lovdata>35 && lovdata<=65)
+        {
+        document.getElementById("lovevalue").style.backgroundColor = "orange";
+        }
+        else
+        {document.getElementById("lovevalue").style.backgroundColor = "red";}
+    }
     }
 </script>
 </body>
-
 </html>
