@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+<body>
+    <h1>How To trace location</h1>
+    <button onclick="geoLocation()">Get Location</button>
+    <div id="output"></div>
+
+    <script>
+        var x = document.getElementById('output');
+
+        function geoLocation(){
+            //alert("Hello"); //for testing Purpose
+            if (navigator.geolocation){
+                //x.innerHTML="Supporting!!";
+                navigator.geolocation.getCurrentPosition(showPositon,showError); 
+            }
+                else{
+                    x.innerHTML="Not Supporting!!";
+                }
+                //we will print here values we got in position object
+                function showPositon(position){
+                    var localAPI = "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude +","+position.coords.longitude+"&sensor=true";
+
+                    x.innerHTML = localAPI;
+                    $.get({
+                        //it takes object. we will pass url through object 
+                        url : localAPI,
+                        success:function(data){
+                            console.log(data);
+
+                            x.innerHTML = data.results[0].address_components[4].long_name+", ";
+                            x.innerHTML += data.results[0].address_components[5].long_name+", ";
+                            x.innerHTML += data.results[0].address_components[6].long_name;
+                        }
+                    });
+                }
+        } //end of function geolocation
+
+        function showError(error){
+            switch(error.code){
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "user denied the request for geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:break
+                    x.innerHTML = "Location Information Is Unavailable."
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                    case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occured."
+                    break;
+
+            }
+        }
+    </script>
+</body>
+</html>

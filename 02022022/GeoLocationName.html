@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How To trace location</h1>
+    <button onclick="geoLocation()">get Location</button>
+    <div id="output"></div>
+
+    <script>
+        var x = document.getElementById('output');
+
+        function geoLocation(){
+            //alert("Hello"); //for testing Purpose
+            if (navigator.geolocation){
+                //x.innerHTML="Supporting!!";
+                navigator.geolocation.getCurrentPosition(showPositon); }
+                else{
+                    x.innerHTML="Not Supporting!!";
+                }
+                //we will print here values we got in position object
+                function showPositon(position){
+                    x.innerHTML = "Latitude = " + position.coords.latitude+"Longitude = " + position.coords.longitude;
+                    //x.innerHTML = "Longitude = " + position.coords.longitude;
+                }
+        }
+    </script>
+</body>
+</html>
