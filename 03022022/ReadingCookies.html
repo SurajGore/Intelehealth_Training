@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cookies</h1>
+    <form action="" name="myform">
+        Name:<input type="text" name="name"><br><br>
+        Email:<input type="email" name="email"><br><br>
+        Language:<input type="text" name="lang"><br><br>
+
+        <input type="button" value="Set Cookies" name="set" onclick="setCookies()">
+        <input type="button" value="Get Cookies" name="get" onclick="getCookies()">
+    </form>
+    <script>
+        function setCookies(){
+            document.cookie = "name=" +document.myform.name.value;
+            //"name=shopping" will not use this form as we r retrieving from form whatever user will input
+            document.cookie = "email=" +document.myform.email.value; + "; max-age=" + 60 * 60 * 24 * 10;
+            document.cookie = "language=" +document.myform.lang.value; + "; max-age=" + 60 * 60 * 24 * 10;
+        }
+        alert(document.cookie);//to read set // cookie & o/p is as follow //name=sachin; email=sachint@gmail.com; language=marathi;
+
+        // to read cookies
+        function getCookies()
+        {
+            var cookiesArray = document.cookie.split(";");
+            console.log(cookiesArray); //after clicking on Get Cookie button u can see on console as a array
+            for(var i=0; i<cookiesArray.length; i++){
+                //for retriving sachine as alone not with name
+                var valueArray = cookiesArray[i].split("=");
+                //console.log(valueArray); //to check
+                if (valueArray[0].trim() == 'name')
+                {
+                    document.myform.name.value = valueArray[1]
+                }
+                else if (valueArray[0].trim() == 'email')
+                {
+                    document.myform.email.value = valueArray[1]
+                }
+                else if (valueArray[0].trim() == 'language')
+                {
+                    document.myform.lang.value = valueArray[1]
+                }
+
+                }
+            } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+    
+    <form onsubmit="return validation()">
+       Emp Name: <input type="text" classname="Name" id="UName" placeholder="UserName" name="name">
+        <br><br>
+        <p id="errorname" style="color: red;"></p>
+
+        City: <input type="text" classname="City" id="city" placeholder="City Name" name="city">
+        <br><br>
+        <p id="errorcity" style="color: red;"></p>
+
+        Mobile: <input type="text" classname="" id="mobile"  placeholder="Mobile Number" name="mobileno">
+        <br><br>
+        <p id="errormobile" style="color: red;"></p>
+
+        Email: <input type="email" classname="" id="email" placeholder="Email" name="email">
+        <br><br>
+        <p id="erroremail" style="color: red;"></p>
+
+        <input type="button" value="Click" onclick="validation()">
+        <input type="button" value="Set Cookies" name="set" onclick="setCookies()">
+        <input type="button" value="Get Cookies" name="get" onclick="getCookies()">
+
+        <table border="1" id="table" text align="center">
+            <thead>
+                <tr>
+                    <th>Emp Name</th>
+                    <th>City Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>	
+        </table>
+    </form>
+    
+    <script>
+    function validation(){
+        var username = document.getElementById("UName").value;
+        //console.log(username);
+
+        var cityname = document.getElementById("city").value;
+        //console.log(cityname);
+
+        var mobile1 = document.getElementById("mobile").value;
+        //console.log(mobile1);
+
+        var email1 = document.getElementById("email").value;
+        //console.log(email1);
+
+        var usercheck = /^[a-zA-Z @ #. ]{3,30}$/;
+        var citycheck1 = /^[a-zA-Z @ #. ]{3,30}$/;
+		var emailcheck = /^[A-Za-z_.]{6,}@[A-Za-z]{4,}[.]{1}[A-Za-z.]{2,}$/;
+		var mobilecheck = /^[6789]{1}[0-9]{9}$/;
+
+        if (usercheck.test(username)){
+            document.getElementById('errorname').innerHTML=" ";
+        }else{
+            document.getElementById('errorname').innerHTML="***Invalid User Name***";
+            return false;
+        }
+
+        if (citycheck1.test(cityname)){
+            document.getElementById('errorcity').innerHTML=" ";
+        }else{
+            document.getElementById('errorcity').innerHTML="***Invalid City Name***";
+            return false;
+        }
+        if (mobilecheck.test(mobile1)){
+            document.getElementById('errormobile').innerHTML=" ";
+        }else{
+            document.getElementById('errormobile').innerHTML="***Invalid Mobile Number*** ";
+            return false;
+        }
+        if (emailcheck.test(email1)){
+            document.getElementById('erroremail').innerHTML=" ";
+        }else{
+            document.getElementById('erroremail').innerHTML="***Invalid Email Name***";
+            return false;
+        }
+     
+
+        var Table = document.getElementById("table");
+		var totalRowCount = Table.rows.length;
+
+        var row = Table.insertRow(totalRowCount);
+
+        var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+
+        cell1.innerHTML = username;
+		cell2.innerHTML = cityname;
+		cell3.innerHTML =  mobile1;
+        cell4.innerHTML = email1;
+    }
+
+
+        function setCookies(){
+            document.cookie = "name=" +document.myform.name.value;
+            document.cookie = "city=" +document.myform.email.value; + "; max-age=" + 60 * 60 * 24 * 10;
+            document.cookie = "mobileno=" +document.myform.email.value; + "; max-age=" + 60 * 60 * 24 * 10;
+            document.cookie = "email=" +document.myform.lang.value; + "; max-age=" + 60 * 60 * 24 * 10;
+        }
+
+        function getCookies()
+        {
+            var cookiesArray = document.cookie.split(";");
+            console.log(cookiesArray); 
+            for(var i=0; i<cookiesArray.length; i++)
+            {
+                var valueArray = cookiesArray[i].split("=");
+
+                if (valueArray[0].trim() == 'name')
+                {
+                    document.myform.name.value = valueArray[1]
+                }
+                else if (valueArray[0].trim() == 'city')
+                {
+                    document.myform.lang.value = valueArray[1]
+                }
+                else if (valueArray[0].trim() == 'mobilno')
+                {
+                    document.myform.email.value = valueArray[1]
+                }
+                else if (valueArray[0].trim() == 'email')
+                {
+                    document.myform.email.value = valueArray[1]
+                }
+
+                }
+            } 
+
+    </script>
+</body>
+</html>
