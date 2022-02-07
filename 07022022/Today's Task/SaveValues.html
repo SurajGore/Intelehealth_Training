@@ -9,7 +9,7 @@
 <body>
   <form> 
       Name:<input type="text" name="name" id="name"><br><br> 
-      <label for="gender">Gender:</label>
+      <label for="gen" id="gender">Gender:</label>
       <label for="male">Male:</label>
       <input type="radio" name="gender" value="male" id="male">
       <label for="female">Female:</label>
@@ -25,9 +25,13 @@
     function Validate(){
     var name = document.getElementById("name").value;
     var gender = document.getElementById("gender").value;
+    var male = document.getElementById("male").value;
+    var female = document.getElementById("female").value;
     var city = document.getElementById("city").value;
     localStorage.setItem("name",name);
 		localStorage.setItem("gender",gender);
+		localStorage.setItem("male",male);
+    localStorage.setItem("female",female);
 		localStorage.setItem("city",city);
    
   }
