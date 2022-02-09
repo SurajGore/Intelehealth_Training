@@ -92,17 +92,23 @@
             { name: "mr.snehal", salary: "30000" },
             { name: "mr.shweta", salary: "50000" },
         ];
+		
+		var arraycurrent = 0;
 
         function add() {
+		debugger;
             var table = document.getElementById('myTbody')
 			var row = "";
-            for (var i = 0; i < array.length; i++) {
-                row = row + `<tr>
-						<td>${array[i].name}</td>
-						<td>${array[i].salary}</td>
-				  </tr>`                
-            }
+			row = table.innerHTML;
+			if (arraycurrent < array.length)
+			{			
+            row = row + `<tr>
+						<td>${array[arraycurrent].name}</td>
+						<td>${array[arraycurrent].salary}</td>
+				  </tr>`                            
+			arraycurrent = arraycurrent + 1;
 			table.innerHTML = row
+			}
         }
 
         function Double() {
