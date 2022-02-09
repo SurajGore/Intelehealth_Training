@@ -4,66 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ageCalculator</title>
+    <title> Html Employee Salary Data </title>
 </head>
 <body align="center" bgcolor="pink">
-<h1 style="color: red" align="center"> Calculate Age from Date of Birth <br> <br> </h1> 
+<h2 style="color: red" align="center"> Calculate Age from Date of Birth <br> <br> </h2> 
 <b> Enter Date of Birth: <input type=date id = DOB>  </b>
 <span id = "message" style="color:red"> </span> <br><br>  
 <button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>
-<h2 style="color: blue" id="result" align="center"></h2> 
+<h3 style="color:blue" id="result" align="center"></h3> 
 
 <script>
-    function ageCalculator()
-     {
-        var userinput = document.getElementById("DOB").value;
-        var dob = new Date(userinput);
-        
-        if(userinput==null || userinput==''){
-          document.getElementById("message").innerHTML = "**Choose a date please!";  
-          return false; 
-        }  
-        else 
-        {
-        var dobYear = dob.getYear();
-        var dobMonth = dob.getMonth();
-        var dobDate = dob.getDate(); 
-        var now = new Date();
-        var currentYear = now.getYear();
-        var currentMonth = now.getMonth();
-        var currentDate = now.getDate(); 
-        var age = {};
-        var ageString = "";
-        yearAge = currentYear - dobYear;
+  function ageCalculator() {
+      var userinput = document.getElementById("DOB").value;
+      var dob = new Date(userinput);
+  
+      if(userinput==null || userinput==''){
+        document.getElementById("message").innerHTML = "**Choose a date please!";  
+        return false; 
+      }  
+      else 
+      {
+      var dobYear = dob.getYear();
+      var dobMonth = dob.getMonth();
+      var dobDate = dob.getDate();
+      
+      var now = new Date();
+      var currentYear = now.getYear();
+      var currentMonth = now.getMonth();
+      var currentDate = now.getDate();
     
-        if (currentMonth >= dobMonth)
+      var age = {};
+      var ageString = "";
+  
+      yearAge = currentYear - dobYear;
+    
+      if (currentMonth >= dobMonth)
         var monthAge = currentMonth - dobMonth;
-        else {
-          yearAge--;
-          var monthAge = 12 + currentMonth - dobMonth;
-        }
-        if (currentDate >= dobDate)
-          var dateAge = currentDate - dobDate;
-        else {
-          monthAge--;
-          var dateAge = 31 + currentDate - dobDate;
-        if (monthAge < 0) 
-        {
-            monthAge = 11;
-            yearAge--;
-        }
-        }
-        age = {
-        years: yearAge,
-        months: monthAge,
-        days: dateAge
-        };
-           
-        if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
-           ageString = age.years + " years, " + age.months + " months, and " + age.days + " days old."; 
-        return document.getElementById("result").innerHTML = ageString;          
+      else {
+        yearAge--;
+        var monthAge = 12 + currentMonth - dobMonth;
       }
+
+      if (currentDate >= dobDate)
+        var dateAge = currentDate - dobDate;
+      else {
+        monthAge--;
+        var dateAge = 31 + currentDate - dobDate;
+  
+        if (monthAge < 0) {
+          monthAge = 11;
+          yearAge--;
+        }
+      }
+      age = {
+      years: yearAge,
+      months: monthAge,
+      days: dateAge
+      };
+        
+        
+      if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
+         ageString = age.years + " years, " + age.months + " months, and " + age.days + " days old.";
+      else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
+         ageString = "Only " + age.days + " days old!";
+      else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
+         ageString = age.years +  " years old. Happy Birthday!!";
+      else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
+         ageString = age.years + " years and " + age.months + " months old.";
+      else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
+         ageString = age.months + " months and " + age.days + " days old.";
+      else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
+         ageString = age.years + " years, and" + age.days + " days old.";
+      else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
+         ageString = age.months + " months old.";
+      
+      else ageString = "Welcome to Earth! <br> It's first day on Earth!"; 
+  
+      return document.getElementById("result").innerHTML = ageString; 
+               
     }
-    </script>
+  }
+  </script>
 </body>
 </html>
+
+ 
