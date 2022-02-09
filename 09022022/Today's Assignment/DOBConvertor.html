@@ -21,7 +21,8 @@
       if(userinput==null || userinput==''){
         document.getElementById("message").innerHTML = "**Choose a date please!";  
         return false; 
-      }  
+      }
+
       else 
       {
       var dobYear = dob.getYear();
@@ -77,7 +78,7 @@
          ageString = age.years + " years, and" + age.days + " days old.";
       else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
          ageString = age.months + " months old.";
-      
+         
       else ageString = "Welcome to Earth! <br> It's first day on Earth!"; 
   
       return document.getElementById("result").innerHTML = ageString; 
