@@ -60,6 +60,10 @@
                     <div>
                         <input type="submit" value="Calculate Salary Of All" onclick="Calculate()"><br><br>
                     </div>
+
+                    <div>
+                        <input type="submit" value="Delete Row" onclick="myDeleteFunction()"><br><br>
+                    </div>
                 </form>
             </td>
             <td>
@@ -68,7 +72,7 @@
                         <tr>
                             <th>Employee</th>
                             <th>Salary</th>
-                            <th></th>
+                            <th id="myth"></th>
                         </tr>
                     </thead>
                     <tbody id="myTbody">
@@ -160,6 +164,11 @@
             var table2 = document.getElementById('employeeList')
             var newRow = `<tr><td>${count}</td>`
             table2.innerHTML += newRow
+        }
+
+        
+        function myDeleteFunction() {
+             document.getElementById("myTbody").deleteRow(0);
         }
     </script>
 </body>
