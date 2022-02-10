@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    The browser have a nifty new attribute that can be applied to elements, called contenteditable.
+    As the name impiles, this allows the user to edit any of the text contained within the element, including its children.
+    There are a variety of uses for something like this, including an app as simple as a to-do list,
+    which also of local stroage.
+    The
+    NOte: When The contenteditable attribute is not set on an element, the element will inherit it from its parent. 
+    <h2>To-Do List To Become A Front - End Developer </h2>
+    <ul contenteditable="true">
+        <li>Learn C</li>
+        <li>Learn C++</li>
+        <li>Learn Javascript</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+How To save Changes ?
+ To Save The Changes, it depends on where we will store our data; commonly we only use a database but in front end we do not have access to database, I am using localstroage to save the changes. -->
+
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         [contenteditable="true"]{padding: 10px; outline: 5px dashed #333; }
+         [contenteditable="true"]:hover{outline: 5px dashed #F00; background:  }
+     </style>
+ </head>
+ <body>
+     <h1>HTML 5 contenteditable attribute example </h1>
+     <div id="content1" contenteditable="true"> This taxt can be edited.</div><br/>
+     <button onclick="save()">Save Changes</button>
+     <script>
+         if (localStorage.newContent !== null){
+             document.getElementById("content1").innerHTML=localStorage.newContent;
+         }
+         function save(){
+             var comtent = document.getElementById("content1").innerHTML;
+             localStorage.newContent = content;
+             alert("Content Has Saved");
+         }
+     </script>
+ </body>
+ </html> -->

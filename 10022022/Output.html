@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form oninput="amount.value=(hours.valueAsNumber*charge.valueAsNumber)+(hours.valueAsNumber*extra.valueAsNumber)">
+    <p>
+        <label>Billed Hours:</label>
+        <input type="number" name="hours" min="0" id="hours">
+    </p>
+
+    <p>
+        <label>Charge:</label>
+        <input type="number" name="rate" min="0" id="charge">
+    </p>
+
+    <p>
+        <label>Others:</label>
+        <input type="number" name="vat" min="0" id="extra">
+    </p>    
+
+    <p>
+        Total:<strong>Rs.<output name="amount" id="amount"></output></strong>
+    </p>
+    </form>
+</body>
+</html>
