@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+   <body>
+      <form name = "myForm" onsubmit = "return(validate());">
+         <table border = "3">
+            
+            <tr>
+               <td align = "left">Enter Racer Name</td>
+               <td align = "left"><input type = "text" placeholder="FIRST NAME ONLY" name = "Name" id="Name" required/></td>
+            </tr>
+            
+            <tr>
+               <td align = "left">Enter Email</td>
+               <td align = "left"><input type = "text" placeholder="abc@xyz.com" name = "Email" id="Email" required /></td>
+            </tr>
+            
+            <tr>
+            <tr>
+               <td align = "left">Enter Age</td>
+               <td align = "left"><input type = "text" placeholder="18-60 c" name = "Age" id="Age" required/></td>
+            </tr>
+            </tr>
+            
+            <tr>
+               <td align = "left">Enter Date Of Birth</td>
+               <td align = "left"><input type = "date" id="DOB" name = "DOB" required/></td>
+            </tr>
+            
+            <tr>
+               <td align = "left">Select Shirt Style</td>
+               <td>
+                  <select name = "Shirt">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">Long</option>
+                     <option value = "2">Shot</option>
+                     <option value = "3">Extra Short</option>
+                  </select>
+               </td>
+            </tr>
+
+            <tr>
+               <td align = "left">Confidence Level:</td>
+               <td><progress class="progress" id="progress1"></progress></td>
+            </tr>
+
+            <tr>
+                <td align="left"><progress class="progress" id="progress2" value="70" max="100"></progress></td>
+            </tr>
+
+            <tr>
+               <td><button onclick="validation">Register</button></td>
+               <td><button onclick="blank">Skip</button></td>
+            </tr>
+
+            
+            <tr>
+                <td><input type = "blank" name = "Name" /></td>
+            </tr>
+            
+         </table>
+      </form> 
+      
+    <script type = "text/javascript">
+    
+    </script> 
+   </body>
+</html>

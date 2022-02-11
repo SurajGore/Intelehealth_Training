@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var worker = new Worker('webdemo.js');
+        worker.postMessage('Hello World India'); //Send data to our worker.
+        worker.addEventListener('message', function(e) {
+            document.write('Worker said:', e.data);
+            console.log(e);
+        } ,false);
+    </script>
+</body>
+</html>
