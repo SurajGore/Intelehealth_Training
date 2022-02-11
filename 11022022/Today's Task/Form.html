@@ -46,7 +46,9 @@
 
             <tr>
                <td align = "left">Confidence Level:</td>
-               <td><input type="range"></td>
+               <td><input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <p>Value: <span id="demo"></span></p>
+               </td>
             </tr>
 
             <tr>
@@ -54,7 +56,7 @@
             </tr>
 
             <tr>
-               <td><button onclick="validation">Register</button></td>
+               <td><button onclick="validation()">Register</button></td>
                <td><input type = "button" value="Skip" /></td>
             </tr>
 
@@ -66,7 +68,15 @@
       </form> 
       
     <script type = "text/javascript">
-    
+       function validation(){
+    var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+       }
     </script> 
    </body>
 </html>
