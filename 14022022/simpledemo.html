@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+                width: 300px;
+                height: 300px;
+                border: 1px solid red;
+        }
+    </style>
+
+    <script>
+        function fun1(event){
+            event.dataTransfer.setData("text/plain",event.currentTarget.textContent);
+            event.dataTransfer.setData("text/data-marks",event.currentTarget.dataset.marks);   
+        }
+        function dragover2(event){
+            event.preventDefault();
+        }
+        function drop2(event){
+            str=event.dataTransfer.getData("text/plain");
+            val=event.dataTransfer.getData("text/data-marks");
+            event.currentTarget.innerHTML+="<li>"+str+"----"+val+"<li>";
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li draggable="true" ondragstart="fun1(event)" data-marks=60>Red</li>
+        <li draggable="true" ondragstart="fun1(event)" data-marks=70>Green</li>
+        <li draggable="true" ondragstart="fun1(event)" data-marks=80>Blue</li>
+    </ul>
+    <div id="d2" ondrop="drop2(event)"  ondragover="dragover2(event)"></div>
+</body>
+</html>
