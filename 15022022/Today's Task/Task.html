@@ -7,51 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-			<div class="employee-form">
-                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
-                    <div>
-                        <label>Name:</label><label class="validation-error hide" id="namevalidation"></label>
-                        <input type="text" name="name" id="name">
-                    </div><br>
-                    <div>
-                        <label name="gender" id="gender">Gender:</label>
-                        <label for="male">Male:</label>
-                        <input type="radio" name="gender" value="male" id="male">
-                        <label for="female">Female:</label>
-                        <input type="radio" name="gender" value="female" id="female"><br><br>
-                    </div><br>
-                    <div>
-                        <label>City</label>
-                        <input type="text" name="city" id="city">
-                    </div><br>
-                    <div>
-                        <label>Email Id</label>
-                        <input type="text" name="email" id="email">
-                    </div><br>
-                    <div>
-                        <input type="submit" value="Register">
-                    </div><br>
+	<div class="employee-form">
+        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+            <div>
+                <label>Name:</label><label class="validation-error hide" id="namevalidation"></label>
+                <input type="text" name="name" id="name">
+            </div><br>
+            <div>
+                <label name="gender" id="gender">Gender:</label>
+                <label for="male">Male:</label>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="female">Female:</label>
+                <input type="radio" name="gender" value="female" id="female"><br><br>
+            </div><br>
+            <div>
+                <label>City</label>
+                <input type="text" name="city" id="city">
+            </div><br>
+            <div>
+                <label>Email Id</label>
+                <input type="text" name="email" id="email">
+            </div><br>
+            <div>
+                <input type="submit" value="Register">
+            </div><br>
                    
-                </form>
-		</div>
-        <br><br>
-		<div>
-            <table class="list" id="employeeList">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Gender</th>
-                        <th>City</th>
-                        <th>Email Id</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                    <tbody>
+        </form>
+	</div>
+    <br><br>
+	<div>
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Email Id</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+                <tbody>
 
                 </tbody>
-            </table>
-        </div>
-    <script>
+        </table>
+    </div>
+ 
+ <script>
         var selectedRow = null
 
 function onFormSubmit() {
@@ -131,6 +132,6 @@ function validate() {
     }
     return isValid;
 }
-    </script>
+</script>
 </body>
 </html>
