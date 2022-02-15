@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;    
+        }
+        #shoppingList{
+            border: 2px solid black;
+            margin: 30px 0 0 0 0;
+        }
+    </style>
+<script>
+    var txtItemId, txtItemCost, txtItemName, txtItemQty, list;
+    var shoppingItems;
+    function ShoppingItem(itmId,itmName,itmCost,itmQty)
+    {
+        this.itemId=itmId;
+        this.itemName=itmName;
+        this.itemCost=itmCost;
+        this.itemQty=itmQty;
+    }
+    shoppingItems=[
+        new ShoppingItem(10,"marker",50,5),
+        new ShoppingItem(20,"cellphone",10000,1)
+    ]
+
+    function loadItems()
+    {
+        str="";
+        for(var i=0; i<shoppingItems.length;i++)
+        {
+            console.log(shoppingItems);
+            console.log(shoppingItems[i].itemId);
+
+            str+= "<li>" + shoppingItems[i].itemId + " X " + shoppingItems[i].itemName + " X " + shoppingItems[i].itemCost + " X " +shoppingItems[i].itemQty + "</li>";
+        }
+        list.innerHTML=str;
+    }
+
+    function btnNewClick()
+    {
+        txtItemQty.value=" ";
+        txtItemName.value=" ";
+        txtItemId.value=" ";
+        txtItemCost.value=" ";
+        txtItemId.focus();
+    }
+
+    function btnSaveClick(){
+        shoppingItems.push(new ShoppingItem(txtItemId.value, txtItemName.value, txtItemCost.value, txtItemQty.value));
+        loadElements();
+        //console.log(shoppingItems);
+    }
+
+    function loadElements(){
+        txtItemCost=document.getElementById("txtItemCost");
+        txtItemId=document.getElementById("txtItemId");
+        txtItemName=document.getElementById("txtItemName");
+        txtItemQty=document.getElementById("txtItemQty");
+        list=document.getElementById("list");
+        loadItems();
+    }
+     
+    function btnUpdateClick(){
+        for (var i=0; i<shoppingItems.length; i++)
+        {
+            if (shoppingItems[i].itemId==txtItemId.value)
+            {
+                shoppingItems[i].itemName=txtItemName.value;
+                shoppingItems[i].itemQty=txtItemQty.value;
+                shoppingItems[i].itemCost=txtItemCost.value;
+                break;
+
+            }
+        }
+        loadElements();
+    }
+    function btnDeleteClick(){
+        for (var i=0;i<shoppingItems.length;i++){
+            if(shoppingItems[i].itemId==txtItemId.value){
+                shoppingItems.splice(i,1);
+                break;
+            }
+        }
+        loadElements();
+    }
+
+</script>
+</head>
+<body onload="loadElements()">
+    <h1>Shopping List</h1>
+    <hr>
+    <div id="shoppingList">
+        <div>
+            <label for="txtItemId">Enter Item Id</label>
+            <input type="text" id="txtItemId">
+        </div>
+        <div>
+            <label for="txtItemName">Enter Item Name</label>
+            <input type="text" id="txtItemName">
+        </div>
+        <div>
+            <label for="txtItemCost">Enter Item Cost</label>
+            <input type="text" id="txtItemCost">
+        </div>
+        <div>
+            <label for="txtItemQty">Enter Item Quantity</label>
+            <input type="text" id="txtItemQty">
+        </div>
+        <div>
+            <input type="button" value="New" onclick="btnNewClick()">
+            <input type="button" value="Save" onclick="btnSaveClick()">
+            <input type="button" value="Update" onclick="btnUpdateClick()">
+            <input type="button" value="Delete" onclick="btnDeleteClick()">
+        </div>
+        <div>
+            <ul id="list"></ul>
+        </div>
+    </div>
+</body>
+</html>
