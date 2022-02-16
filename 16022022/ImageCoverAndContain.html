@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            border: 1px solid black;
+            height: 150px;
+            width: 180px;
+            background: url(jaguar.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .div2{
+            border: 1px solid black;
+            height: 150px;
+            width: 180px;
+            background: url(jaguar.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .div3{
+            border: 1px solid black;
+            height: 150px;
+            width: 180px;
+            background: url(jaguar.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <p>Original Img:</p>
+    <div class="div1">
+        <p>Hello World</p>
+    </div>
+
+    
+    <p>Using the "contain" Keyword:</p>
+    <div class="div2">
+        <p>Hello World 2</p>
+    </div>
+
+    
+    <p>Using the "Cover" Keyword:</p>
+    <div class="div3">
+        <p>Hello World 3</p>
+    </div>
+
+</body>
+</html>
