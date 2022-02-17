@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .floating-box{
+            float: left;
+            width: 150px;
+            height: 75px;
+            margin: 10px;
+            border: 3px solid gray;
+        }
+        .after-box{
+            
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+    <h2>The Old Way - using float</h2>
+    <div class="floating-box">floating box</div>
+
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box">floating box</div>
+    <div class="floating-box after-box" style="border:2px solid red">Another box, The floating boxes...</div>
+</body>
+</html>
