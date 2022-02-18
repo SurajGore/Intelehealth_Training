@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newspaper{
+            /* -webkit-column-count: ; chrome, safari, opera */
+            /* -moz-column-count: ; firefox */
+            column-count: 3;
+            -webkit-column-gap: 40px; /*chrome,safari,opera*/
+            -moz-column-gap: 40px; /*firefox*/
+            column-gap: 80px;
+            -webkit-column-rule-style: solid;  /*chrome,safari,opera*/
+            -moz-column-rule-style: solid; /*firefox*/
+            column-rule-style: solid;
+            column-rule-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <p> <b>Note:</b>Internet Explorer 9, and earlier versions, does not support the column-rule-style property.</p>
+    <div class="newspaper">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem omnis ducimus facere consectetur sunt numquam velit, soluta esse similique autem quis quo temporibus amet dolores reprehenderit iusto saepe ex aliquid.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat corrupti cum repellendus tempora nobis fugit quisquam doloremque, nostrum eligendi delectus animi dolores veniam dolorum, nesciunt illo libero eum dolor repudiandae.
+    </div>
+</body>
+</html>
