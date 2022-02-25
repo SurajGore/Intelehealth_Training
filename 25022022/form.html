@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Stacked form</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!--end of div stacked form-->
+  <!--Form controls
+Textual form controls—like <input>s, <select>s, and <textarea>s—are styled with
+   the .form-control class.
+    Included are styles for general appearance, focus state, sizing, and more.
+  .form-control class to style inputs with full-width and proper padding, etc
+
+    Use a wrapper element with class="form-check" 
+    to ensure proper margins for labels and checkboxes.
+
+    .form-check-label class to label elements, and .form-check-input 
+    to style checkboxes properly inside the .form-check container.
+  -->
+
+
+  <div class="container">
+    <h2>Inline form</h2>
+    <p>Make the viewport larger than 576px wide to see that all of the form elements are inline and left-aligned. On
+      small screens, the form groups will stack horizontally.</p>
+    <form class="form-inline">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div><br /><br />
+  <!--
+    Use a wrapper element with class="form-check" 
+    to ensure proper margins for labels and checkboxes.
+
+    .form-check-label class to label elements, and .form-check-input 
+    to style checkboxes properly inside the .form-check container.-->
+
+  <h2>Horizontal form</h2>
+  <form>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              First radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Second radio
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+            <label class="form-check-label" for="gridRadios3">
+              Third disabled radio
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group row">
+      <div class="col-sm-2">Checkbox</div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Example checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </div>
+  </form>
+  <br /><br /><br /><br />
+
+  <!--If you want
+     to have <input readonly> elements in your form styled as plain text, 
+     use the .form-control-plaintext class to remove the default form field styling 
+     and preserve the correct margin and padding.
+
+
+
+     .col-form-label to your <label>s as well
+        so they’re vertically centered with their associated form controls.
+
+
+    Default (stacked)
+    By default, any number of checkboxes and
+    radios that are immediate sibling will be vertically stacked and
+    appropriately spaced with .form-check.
+
+
+    Use a wrapper element with class="form-check" 
+    to ensure proper margins for labels and checkboxes.
+
+    .form-check-label class to label elements, and .form-check-input 
+    to style checkboxes properly inside the .form-check container.
+
+-->
+
+
+</body>
+
+</html>

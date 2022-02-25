@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+ <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-primary" 
+data-toggle="modal" data-target="#exampleModal">
+  Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" role="dialog" >
+  <!--modal class identifies contents n id links it to signup -->
+  <div class="modal-dialog" role="document">
+    <!--sets proper margin n width of modal -->
+
+     <!-- Modal content-->
+    <div class="modal-content">
+      <!-- dis class gives border background n 
+        adds header body footer of modal-->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" >
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <!--data-dismiss colses modal when u click close -->
+      </div><!--end of modal-footer-->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
