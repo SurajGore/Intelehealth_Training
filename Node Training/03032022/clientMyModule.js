@@ -1,6 +1,8 @@
 // var moduleRef = require('./myModule');
 // console.log(moduleRef.sayHello("bitcode"));
 // console.log(moduleRef.sumAll(1, 2 ,3));
+// console.log(moduleRef.addition(90,67));
+// console.log(moduleRef.addition(90,57,26,45));
 
 
 
@@ -62,24 +64,24 @@ console.log(p1.name===p2.name);
 console.log(p1.sayHello===p2.sayHello);
 
 //Prototye Pattern
-function Person(name,email,tel)
-{
-    this.name = name;
-    this.email = email;
-    this.tel = tel;
-    this.friends = ["Suraj", "Siddik"];
-}
-Person.prototype = 
-{
-    sayHello: function()
-    {
-        return "Hello " + this.name;
-    }
-}
-var p1 = new Person("bitcode","test@gmail.com",2374629364);
-var p2 = new Person("Suraj","suraj@gmail.com",8855941441);
-p1.friends.push("sana");
-console.log(p1.friends);
-console.log(p2.friends);
-console.log(p1.friends === p2.friends);
-console.log(p1.sayHello === p2.sayHello);
+// function Person(name,email,tel)
+// {
+//     this.name = name;
+//     this.email = email;
+//     this.tel = tel;
+//     this.friends = ["Suraj", "Siddik"];
+// }
+// Person.prototype = 
+// {
+//     sayHello: function()
+//     {
+//         return "Hello " + this.name;
+//     }
+// }
+// var p1 = new Person("bitcode","test@gmail.com",2374629364);
+// var p2 = new Person("Suraj","suraj@gmail.com",8855941441);
+// p1.friends.push("sana");
+// console.log(p1.friends);
+// console.log(p2.friends);
+// console.log(p1.friends === p2.friends);
+// console.log(p1.sayHello === p2.sayHello);
