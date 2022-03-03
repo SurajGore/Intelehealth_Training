@@ -18,7 +18,7 @@
 //     return o;
 // }
 
-// var p1 = createPattern("Vishal","vishal@gmail.com",9582300883);
+// var p1 = createPattern("Suraj","suraj@gmail.com",8855941441);
 // var p1 = createPattern("bitcode","test@gmail.com",8358453454);
 // console.log(p1.name === p2.name);
 // console.log(p1.sayHello === p2.sayHello);
@@ -37,16 +37,16 @@
 //     }
 // }
 
-// var p1 = new Person("Vishal","vishal@gmail.com",9582300883);
-// var p2 = new Person("bitcode","test@gmail.com",9582345343);
+// var p1 = new Person("Suraj","suraj@gmail.com",8855941441);
+// var p2 = new Person("bitcode","test@gmail.com",9090906466);
 // console.log(p1.name === p2.name);
 // console.log(p1.sayHello === p2.sayHello);
 
 
 // Prototype Pattern
 function Person(){};
-Person.prototype.name = "Vishal";
-Person.prototype.email = "vishal@gmail.com";
+Person.prototype.name = "Suraj";
+Person.prototype.email = "suraj@gmail.com";
 Person.prototype.tel = 9582300883;
 Person.prototype.friends = ["Suraj", "Siddik"];
 Person.prototype.sayHello = function()
@@ -57,7 +57,7 @@ var p1=new Person();
 p1.name="new name";
 p1.friends.push("Sana");
 console.log
-var p2=createPerson("vishal","vishal@gmail.com",9582300883);
+var p2=createPerson("suraj","suraj@gmail.com",8855941441);
 console.log(p1.name===p2.name); 
 console.log(p1.sayHello===p2.sayHello);
 
@@ -77,7 +77,7 @@ Person.prototype =
     }
 }
 var p1 = new Person("bitcode","test@gmail.com",2374629364);
-var p2 = new Person("Vishal","visahl@gmail.com",9582300883);
+var p2 = new Person("Suraj","suraj@gmail.com",8855941441);
 p1.friends.push("sana");
 console.log(p1.friends);
 console.log(p2.friends);
