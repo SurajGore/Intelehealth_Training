@@ -1,6 +1,7 @@
 // var moduleRef = require('./myModule');
 // console.log(moduleRef.sayHello("bitcode"));
-// console.log(moduleRef.sumAll(1, 2 ,3));
+// console.log(moduleRef.addition(90,67));
+// console.log(moduleRef.addition(90,67,50,85));
 
 
 
@@ -19,7 +20,7 @@
 // }
 
 // var p1 = createPattern("Suraj","Suraj@gmail.com",8855941441);
-// var p1 = createPattern("bitcode","test@gmail.com",9562466236);
+// var p1 = createPattern("bitcode","test@gmail.com",1234567890);
 // console.log(p1.name === p2.name);
 // console.log(p1.sayHello === p2.sayHello);
 
