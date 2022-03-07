@@ -7,7 +7,7 @@ http.createServer((req,res)=>
     {
         //res.write("<h1>This is GET for node URL</h1>");
         res.write("<form method = 'POST' action = 'angular'> <div> Enter Name");
-        res.write("<input type=text name='txtName/> </div>");
+        res.write("<input type=text name='txtName'/> </div>");
         res.write("<div><input type=submit value='send data'></div></form>");
     }
     
@@ -18,4 +18,4 @@ http.createServer((req,res)=>
     res.end();
 
 }).listen (4001);
-console.log("Server is running on 4001 ");
+console.log("Server is running on 4001");
