@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="DisplayUserList()" style="text-align: center;">User List</button>
+    <br></br>
+    <table class="list" id="mytable">
+        <thead><tr>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody id="myTbody">
+    </tbody>
+    </table>
+    <script>
+        function DisplayUserList() {
+          var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://dummyapi.io/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10", true);
+            xhr.setRequestHeader("app-id","621f30add848e50b85948d88");
+            xhr.onload = function () {
+                console.log(xhr.responseText);
+              var UserListJSON = xhr.responseText;              
+              var userlistobj = JSON.parse(UserListJSON);
+             console.log(userlistobj);
+            //  var userlistdata = userlistobj.data;
+            //  console.log(userlistdata);
+             var table = document.getElementById('myTbody');
+             table.innerHTML = "";
+             userlistobj.forEach(AppendDataToTable);             
+            };
+            xhr.send();
+        }
+
+        function AppendDataToTable(UserInfo){
+            var User = UserInfo;
+            console.log(User);
+            var table = document.getElementById('myTbody');
+            var row = "";
+            row = table.innerHTML;
+            row = row + `<tr>
+						<td>${User.id}</td>
+						<td>${User.title}</td>
+                        <td>${User.firstName}</td>
+                        <td>${User.lastName}</td>
+                        <td><img src=${User.picture} alt="" border=3 height=100 width=100></img></td>
+				  </tr>` 
+            table.innerHTML = row                           
+
+        }
+    </script>
+</body>
+</html>

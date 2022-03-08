@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get User Profile</title>
+    <style>
+            
+    </style>    
+</head>
+<body>  
+    
+    <button onclick="DisplayUserProfile()" style="text-align: center;">User Profile</button>
+    <br></br>
+    <img id="Profile"></img><br>
+     id: <label id="userid"></label><br>
+     Name: <label id="title"></label><label id="firstname"></label><label id="lastname"></label><br>
+     Gender: <label id="Gender"></label><br>
+     Date Of Birth: <label id="dob"></label><br>
+     Register Date: <label id="registerdate"></label><br>
+     Email: <label id="email"></label><br>
+     Phone: <label id="Phone"></label><br>
+     Address <label id="Address"></label><br>
+     State:<label id="state"></label><br>
+     Street: <label id="street"></label><br>
+     City: <label id="city"></label><br>
+     Country: <label id="country"></label><br>
+     TimeZone: <label id="timezone"></label>
+
+    <script>
+        function DisplayUserProfile() {
+          var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca", true);
+            xhr.setRequestHeader("app-id","621f30add848e50b85948d88");
+            xhr.onload = function () {
+                console.log(xhr.responseText);
+              var UserListJSON = xhr.responseText;              
+              var userlistobj = JSON.parse(UserListJSON);
+             console.log(userlistobj);
+             console.log(userlistobj.firstName);
+             var image = document.getElementById("Profile");
+             image.src=userlistobj.picture;
+             var userid = document.getElementById("userid");
+             userid.innerHTML=userlistobj.id;
+             var title = document.getElementById("title");
+             title.innerHTML=userlistobj.title;
+             var firstName = document.getElementById("firstname");
+             firstName.innerHTML=userlistobj.firstName;
+             var lastName = document.getElementById("lastname");
+             lastName.innerHTML=userlistobj.lastName;
+             var gender = document.getElementById("Gender");
+             gender.innerHTML=userlistobj.gender;
+             var dateOfBirth = document.getElementById("dob");
+             dateOfBirth.innerHTML=userlistobj.dateOfBirth;
+             var registerDate = document.getElementById("registerdate");
+             registerDate.innerHTML=userlistobj.registerDate;
+             var email = document.getElementById("email");
+             email.innerHTML=userlistobj.email;
+             var phone = document.getElementById("Phone");
+             phone.innerHTML=userlistobj.phone;
+             var Address = document.getElementById("Address");
+             var location = userlistobj.location;
+             var state = document.getElementById("state");
+             state.innerHTML = location.state;
+             var street = document.getElementById("street");
+             street.innerHTML = location.street;
+             var city = document.getElementById("city");
+             city.innerHTML = location.city;
+             var country = document.getElementById("country");
+             country.innerHTML = location.country;
+             var timezone = document.getElementById("timezone");
+             timezone.innerHTML = location.timezone;
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

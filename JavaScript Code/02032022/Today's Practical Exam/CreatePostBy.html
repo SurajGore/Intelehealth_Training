@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        th {
+            color: #fff;
+        }
+    </style>
+
+    <!-- <table id="mytable">
+        <tr>
+            <th>id</th>
+            <th>Title</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        
+    </table> -->
+</head>
+
+<body>
+    <h1 align="center" style="padding-top:20px; padding-bottom:20px; background-color: lightblue;">Fetching the data from Api(url)</h1>
+    <button onclick="Fetch_Data_Api()">Post BY Tag</button>
+    <table class="table table-striped">
+        <tr class="bg-info">
+            <th>Id</th>
+            <th>title</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Picture</th>
+        </tr>
+
+        <tbody id="myTable"></tbody>
+    </table>
+    <script>
+        function Fetch_Data_Api() {
+            var ApiData = new XMLHttpRequest();
+            ApiData.open("GET", "https://dummyapi.io/data/v1/user?limit=10", true);
+            ApiData.setRequestHeader("app-id", "621f30add848e50b85948d88")
+            ApiData.onload = function () {
+                var UserListJSON = JSON.parse(ApiData.responseText);
+                var userlistdata = UserListJSON.data;
+                console.log(userlistdata);
+                buildTable(userlistdata)
+                function buildTable(data) {
+                    var table = document.getElementById('myTable')
+                    for (var i = 0; i < data.length; i++) {
+                        var row = `<tr>
+							<td>${data[i].id}</td>
+							<td>${data[i].title}</td>
+							<td>${data[i].firstName}</td>
+							<td>${data[i].lastName}</td>
+							<td><img src=${data[i].picture} alt="" border=3 height=100 width=100></img></td>
+					  </tr>`
+                        table.innerHTML += row
+                    }
+                }
+            };
+            ApiData.send();
+        }
+    </script>
+</body>
+
+</html>
+
+
+
