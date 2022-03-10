@@ -9,7 +9,7 @@ server.on('request',(req, res) => {
 // });
 
 const src = fs.createReadStream('./big.txt');
-const wrt = fs.createwriteStream('./test.txt');
+const wrt = fs.createWriteStream('./test.txt');
 src.pipe(res);
 
 });
