@@ -9,12 +9,12 @@
 <body>
     <script>
         function Student(name){
-            this.name = Suraj;
-            this.name = Sachin;
+            this.name = name;
+            this.ram = name;
         }
 
-        var = new Student('Galaxy');
-        var  = new Student('3310');
+        var nokia = new Student('Galaxy');
+        var samsung = new Student('3310');
 
         if(nokia.hasOwnProperty('ram')){
             document.write("Available");
@@ -25,6 +25,7 @@
 
         if(typeof nokia.ram !== 'undefined'){
             document.write("Available");
+            document.write(nokia.ram);
         }
         else{
             document.write("Doesnt Exist"+"<br/>")
