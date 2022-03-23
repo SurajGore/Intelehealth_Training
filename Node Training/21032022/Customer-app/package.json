@@ -1,0 +1,17 @@
+{
+  "name": "customer-app",
+  "version": "1.0.0",
+  "description": "This Is My New Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "Customer"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.8"
+  }
+}
