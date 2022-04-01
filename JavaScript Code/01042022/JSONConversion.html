@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Conversion of Javascript Object to JSON
+        var person = {
+            name: "Sachin",
+            age: 30
+        }
+        console.log(person);
+
+        var jsonPerson = JSON.stringify(person);
+        console.log(jsonPerson);
+        // console.log(person.name);
+
+        //Conversion from JSON object to Javascript
+        var jsPerson = JSON.parse(jsonPerson);
+        console.log(jsPerson);
+        console.log(jsPerson.name);
+
+    </script>
+</body>
+
+</html>

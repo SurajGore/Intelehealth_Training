@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Syncronous Execution Example
+        // let fun2 = () =>{
+        //     console.log("fun2 is start");
+        // }
+
+        // let fun1 = () => {
+        //     console.log("fun1 is start");
+        //     fun2();
+        //     console.log("fun1 is end");
+        // }
+
+        // fun1();
+
+
+        //Asyncronous Execution Example
+        // let fun2 = () => {
+        //     setTimeout(()=>{
+        //         console.log("fun2 is start");
+        //     },  3000);
+        // }
+
+        // let fun1 = () => {
+        //     console.log("fun1 is start");
+        //     fun2();
+        //     console.log("fun1 is end");
+        // }
+
+        // fun1();
+
+        //      Nested CallBack
+        //      let getRollNo = () => {
+        //      setTimeout (() => {
+        //       let RollNos = [1, 2, 3, 4, 5, 6];
+        //       console.log(RollNos);
+
+        //       setTimeout ((rollno) => { 
+        //         let StudentDetails = {
+        //           name: "Sachin T",
+        //           age: 30
+        //         };
+        //         console.log( `My Roll No is ${rollno}. My Name is 
+        //         ${StudentDetails.name} and Age is ${StudentDetails.age} `);
+
+        //         setTimeout((name) => {
+        //           StudentDetails.email = "sachin@gmail.com";
+        //           console.log(`name is ${name},My Roll No is
+        //           ${rollno}.My Name is ${StudentDetails.name} 
+        //         and Age is ${StudentDetails.age} and email is
+        // ${StudentDetails.email} `);
+        //         }, 3000, StudentDetails.name);
+
+        //     }, 3000, RollNos[4]);
+
+        // }, 3000);
+        // }
+
+        // getRollNo();
+
+        //Executor
+        let obj1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let RollNos = [1, 2, 3, 4, 5, 6];
+                //   resolve(RollNos);//if o/p comes then consume
+                reject("Error occured !!");//if does not then handle with catch
+            }, 3000);
+        });
+
+        // Consume
+        obj1.then((rolnos) => {
+            console.log(rolnos);
+
+        }).catch((msg) => {
+            console.log(msg);
+        });
+    </script>
+</body>
+
+</html>
